@@ -95,7 +95,6 @@ body {
 #main {
     margin: 0;
     padding: 0;
-    display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row;
     flex-flow: row;
@@ -107,6 +106,9 @@ header {
     display: flex;
     align-items: center;
     font-weight: 300;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 nav ul {
@@ -145,15 +147,24 @@ nav ul li a:hover {
 }
 
 #helpButton {
-    color: #7fd4d2;
+    text-decoration: none;
+    color: black;
+    background-color: #7fd4d2;
+    border-radius: 10px;
     font-size: 0.9rem;
+    font-weight: 700;
+    padding: 5px;
     margin-left: 10px;
     text-transform: uppercase;
 }
 
+#helpButton:hover {
+    background-color: #76b1b0;
+}
+
 #banner {
     width: 100%;
-    line-height: 90px;
+    line-height: 80px;
     background-image: url("rsz_map_acasa.jpg");
     border-bottom: 0.5px solid #313639;
     text-align: center;
@@ -174,13 +185,38 @@ nav ul li a:hover {
 
 #main>aside {
     background: #c5c3c4;
-    -webkit-flex: 1 6 0;
-    flex: 1 6 0;
-}
-
-#main>aside {
+    display: flex;
+    -webkit-flex-flow: column;
+    flex-flow: column;
     -webkit-order: 2;
     order: 2;
+    align-items: stretch;
+    padding: 15px;
+    justify-content: space-around;
+    top: 0;
+    position: sticky;
+}
+
+.formatbutton {
+    text-decoration: none;
+    color: #7fd4d2;
+    background-color: #313639;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.formatbutton:hover {
+    color: #313639;
+    font-weight: 700;
+    background-color: #7fd4d2;
+}
+
+#format {
+    color: black;
+    font-weight: bold;
 }
 
 header,
@@ -190,6 +226,99 @@ footer {
 
 footer {
     background: #313639;
+}
+
+[class^="pie"] {
+    stroke-width: 60;
+    fill: none;
+    transition: all ease 450ms;
+}
+
+[class^="pie"]:hover {
+    stroke-width: 70;
+    border-radius: 4px;
+}
+
+[class^="line-"] {
+    stroke-width: 2;
+    stroke: #0a0a0a;
+}
+
+.pie-1 {
+    stroke-dashoffset: 498;
+    stroke: #e44345;
+    stroke-dasharray: 208 630;
+    transition-delay: 25ms;
+}
+
+.pie-2 {
+    stroke-dasharray: 100 630;
+    stroke-dashoffset: 490;
+    stroke: #f7941e;
+    transition-delay: 50ms;
+}
+
+.pie-3 {
+    stroke-dasharray: 85 630;
+    stroke-dashoffset: 560;
+    stroke: #ffde16;
+    transition-delay: 75ms;
+}
+
+.pie-4 {
+    stroke-dasharray: 85 630;
+    stroke-dashoffset: -69;
+    stroke: #0ba14b;
+    transition-delay: 100ms;
+}
+
+.pie-5 {
+    stroke-dasharray: 80 630;
+    stroke-dashoffset: 10;
+    stroke: #13a89e;
+    transition-delay: 125ms;
+}
+
+.pie-6 {
+    stroke-dasharray: 40 630;
+    stroke-dashoffset: 81;
+    stroke: #1563a1;
+    transition-delay: 150ms;
+}
+
+.pie-7 {
+    stroke-dasharray: 36 630;
+    stroke-dashoffset: 111;
+    stroke: #7f3f98;
+    transition-delay: 200ms;
+}
+
+.pie-8 {
+    stroke-dasharray: 8 630;
+    stroke-dashoffset: 90;
+    stroke: #d399c5;
+    transition-delay: 250ms;
+}
+
+.outline {
+    stroke-width: 68;
+    stroke: #7fd4d2;
+    fill: none;
+}
+
+.text-head {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text_label {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+svg {
+    width: 500px;
+    height: 450px;
 }
 
 @media all and (max-width: 640px) {
