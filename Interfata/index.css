@@ -1,0 +1,27 @@
+.index_main {
+    height:100vh;
+    background: url(rsz_map_acasa.jpg); 
+    background-size: cover;
+	display: flex;
+    justify-content: space-around;
+	align-items: center;
+}
+
+.card {
+	background: white;
+	color: black;
+	padding: 30px;
+	border-radius: 4px;
+	width: 300px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+    text-align: center;
+}
+
+.card>h1 {
+	color: #7fd4d2;
+	font-weight: bold;
+	font-size: 1.5em;
+	margin:5px;
+}

@@ -90,6 +90,7 @@ video {
 body {
     font: 1.2em/1.3em "Museo Sans", 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Roboto-Light', 'Roboto Light', 'Roboto', 'Segoe UI Web Light', 'Segoe UI Light', 'Segoe UI Web Regular', 'Segoe UI', Helvetica, Arial, sans-serif;
     color: #fff;
+	flex-direction: column;
 }
 
 #main {
@@ -110,6 +111,10 @@ header {
     position: -webkit-sticky;
     position: sticky;
 }
+
+#menu-button{
+	display: none;
+	}
 
 nav ul {
     list-style: none;
@@ -172,7 +177,7 @@ nav ul li a:hover {
     color: black;
 }
 
-#main>article {
+#vizualizare {
     background: #f4f5f5;
     border-right: 0.5px solid #313639;
     color: black;
@@ -181,6 +186,8 @@ nav ul li a:hover {
     -webkit-order: 1;
     order: 1;
     padding: 1em;
+	flex-flow: column;
+	text-align: center;
 }
 
 #main>aside {
@@ -192,14 +199,39 @@ nav ul li a:hover {
     order: 2;
     align-items: stretch;
     padding: 15px;
-    justify-content: space-around;
-    top: 0;
-    position: sticky;
+   
+}
+
+#main>#vizualizare>#opt_section {
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	padding: 10px;
+	background:#c5c3c4; 
+	border-radius: 4px;
+}
+
+#export_form>input {
+	padding: 5px;
+	background:#7fd4d2;
+	border: none;
+	border-radius: 4px;
+}
+
+#export_form>select {
+  padding: 3px;
+  border: 1px solid #c5c3c4;
+  border-radius: 4px;
+}
+
+#export_form>select:focus {
+	outline: none;
 }
 
 .formatbutton {
     text-decoration: none;
     color: #7fd4d2;
+	margin-top: 30px;
     background-color: #313639;
     padding: 10px;
     font-weight: 700;
@@ -217,6 +249,7 @@ nav ul li a:hover {
 #format {
     color: black;
     font-weight: bold;
+	display: inline
 }
 
 header,
@@ -226,6 +259,7 @@ footer {
 
 footer {
     background: #313639;
+	display: flex;
 }
 
 [class^="pie"] {
@@ -321,6 +355,11 @@ svg {
     height: 450px;
 }
 
+#map {
+    width: 100%;
+    height: 500px;
+}
+
 @media all and (max-width: 640px) {
     html,
     #main,
@@ -331,6 +370,23 @@ svg {
         display: flex;
         -webkit-flex-flow: column;
         flex-flow: column;
+		text-align: center;
+    }
+	#menu-button {
+		display: inline;
+		background: #313639;
+        color: white;
+        border:0;		
+	}
+	
+	#menu-button:focus {
+		outline: none;
+	}
+	.menu {
+		display:none;
+	}
+	.show-menu {
+         display: flex;
     }
     header {
         padding: 0;
@@ -339,7 +395,6 @@ svg {
     }
     nav ul li {
         border-bottom: 1px solid #7fd4d2;
-        text-align: center;
         letter-spacing: 2px;
     }
     nav ul li a {
@@ -349,10 +404,12 @@ svg {
     .logo {
         font-weight: bold;
     }
-    .actions {
-        display: none;
-    }
-    #main>article,
+	
+	#helpButton {
+		display: none;
+	}
+   
+    #vizualizare,
     #main>aside,
     nav,
     header {
