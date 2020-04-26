@@ -10,18 +10,35 @@
 .card {
 	background: white;
 	color: black;
-	padding: 30px;
-	border-radius: 4px;
+	/*padding: 30px;*/
+	border-radius: 8px;
 	width: 300px;
 	display: flex;
 	flex-flow: column;
-	align-items: center;
+	align-items: stretch;
     text-align: center;
 }
 
-.card>h1 {
-	color: #7fd4d2;
-	font-weight: bold;
-	font-size: 1.5em;
+#main>article>h1 {
+	background: #7fd4d2;
+	color:white;
+	padding: 50px;
+	border-radius: 8px;
+	font-size: 1.8em;
 	margin:5px;
+}
+
+#main>article>p {
+	border-radius: 8px;
+	padding-bottom: 15px;
+}
+
+.card>i { 
+	color: #313639;
+	position: relative;
+	top:-45px;
+}
+
+.card>i>i {
+	color: yellow;
 }

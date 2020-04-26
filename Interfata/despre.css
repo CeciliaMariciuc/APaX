@@ -1,0 +1,19 @@
+.despre_main {
+	display: flex;
+	background: gray;
+	height:100vh;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+.card_despre {
+	background: white;
+	color: black;
+	padding: 30px;
+	border-radius: 4px;
+	width: 400px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+    text-align: center;
+}
