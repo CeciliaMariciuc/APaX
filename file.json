@@ -1,0 +1,132 @@
+[
+    {
+        "_id": "5eb9337471c7175af8affffe",
+        "toId": "1",
+        "fromId": "2",
+        "fromName": "Popa Mihai",
+        "content": "Buna ziua! Unse se afla clinica dumneavoastra?",
+        "createdDate": "2020-05-11T11:13:56.565+0000",
+        "messageType": "QUESTION",
+        "responseTo": ""
+    },
+    {
+        "_id": "5eb9341571c7175af8afffff",
+        "toId": "",
+        "fromId": "",
+        "fromName": null,
+        "content": "nu stiu unde este clinica..",
+        "createdDate": "2020-05-11T11:16:37.628+0000",
+        "messageType": "ANSWEAR",
+        "responseTo": "5eb9337471c7175af8affffe"
+    },
+    {
+        "_id": "5eb937b371c7175af8b00001",
+        "toId": "1",
+        "fromId": "2",
+        "fromName": "Popa Mihai",
+        "content": "Exista clinica si in Brasov?",
+        "createdDate": "2020-05-11T11:32:03.718+0000",
+        "messageType": "QUESTION",
+        "responseTo": ""
+    },
+    {
+        "_id": "5eb9380071c7175af8b00002",
+        "toId": "",
+        "fromId": "",
+        "fromName": null,
+        "content": "Nu este si in brasov...",
+        "createdDate": "2020-05-11T11:33:20.363+0000",
+        "messageType": "ANSWEAR",
+        "responseTo": "5eb937b371c7175af8b00001"
+    },
+    {
+        "_id": "5eb9477971c7175af8b00003",
+        "toId": "",
+        "fromId": "",
+        "fromName": null,
+        "content": "Mi-am amintit, este in Iasi!",
+        "createdDate": "2020-05-11T12:39:21.939+0000",
+        "messageType": "ANSWEAR",
+        "responseTo": "5eb9337471c7175af8affffe"
+    },
+    {
+        "_id": "5eb94dfe71c7175af8b00004",
+        "toId": "",
+        "fromId": "",
+        "fromName": null,
+        "content": "Puteti gasi adresa pe pagina mea.",
+        "createdDate": "2020-05-11T13:07:10.293+0000",
+        "messageType": "ANSWEAR",
+        "responseTo": "5eb9337471c7175af8affffe"
+    },
+    {
+        "_id": "5eb9639b71c7175af8b00006",
+        "toId": "3",
+        "fromId": "",
+        "fromName": null,
+        "content": "Cum pot sa fac o programare?",
+        "createdDate": "2020-05-11T14:39:23.238+0000",
+        "messageType": "QUESTION",
+        "responseTo": ""
+    },
+    {
+        "_id": "5eb9654e71c7175af8b00007",
+        "toId": "2",
+        "fromId": "",
+        "fromName": "",
+        "content": "Puteti merge la Iasi sau la Bacau! ",
+        "createdDate": "2020-05-11T14:46:38.304+0000",
+        "messageType": "ANSWEAR",
+        "responseTo": "5eb937b371c7175af8b00001"
+    },
+    {
+        "_id": "5eb97d581cdc0f7069557cec",
+        "toId": "1",
+        "fromId": "2",
+        "fromName": "Popa Mihai",
+        "content": "Exista clinica si in Brasov?",
+        "createdDate": "2020-05-11T16:29:12.234+0000",
+        "messageType": "QUESTION",
+        "responseTo": ""
+    },
+    {
+        "_id": "5eb97d7b1cdc0f7069557ced",
+        "toId": "3",
+        "fromId": "",
+        "fromName": "andrei",
+        "content": "salut unde e clinica?",
+        "createdDate": "2020-05-11T16:29:47.518+0000",
+        "messageType": "QUESTION",
+        "responseTo": ""
+    },
+    {
+        "_id": "5eba48cb1f0f7a0d73c2fc8f",
+        "toId": "1",
+        "fromId": "",
+        "fromName": "andrei",
+        "content": "pot sa fac programare?",
+        "createdDate": "2020-05-12T06:57:15.628+0000",
+        "messageType": "QUESTION",
+        "responseTo": ""
+    },
+    {
+        "_id": "5eba48e11f0f7a0d73c2fc90",
+        "toId": "2",
+        "fromId": "",
+        "fromName": "",
+        "content": "ok",
+        "createdDate": "2020-05-12T06:57:37.976+0000",
+        "messageType": "ANSWEAR",
+        "responseTo": "5eb9337471c7175af8affffe"
+    },
+    {
+        "_id": "5ec36aff68300e5b0b7b641f",
+        "toId": "5ec2cd0c474ef40004ebf2bb",
+        "fromId": "1",
+        "fromName": "Andrei",
+        "content": "Buna ziua! Cum fac o programare?",
+        "createdDate": "2020-05-19T05:13:35.102+0000",
+        "messageType": "QUESTION",
+        "responseTo": ""
+    }
+]
