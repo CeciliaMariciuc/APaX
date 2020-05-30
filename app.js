@@ -1,18 +1,39 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
+var url = require('url');
 var CarController = require('./Controller/CarController');
 
-function handleRequest(request, response) {
-    console.log('request ', request.url);
+function handleRequest(request, response, next) {
 
+    console.log('request ', request.url);
+    var carController = new CarController();
     var filePath = '.' + request.url;
-    if (filePath == './api/cars/one' && request.method === 'GET') {
-        console.log('Request Type:' +
+    if (filePath.includes("api")) {
+        console.log('Request Type: ' +
             request.method + ' Endpoint: ' +
             filePath);
-        var carController = new CarController();
-        carController.getOne(request, response);
+        if (filePath == './api/cars' && request.method === 'GET') {
+            carController.getAll(request, response);
+        }
+        if (filePath == './api/cars/one' && request.method === 'GET') {
+            carController.getOne(request, response);
+        }
+        if (filePath.includes('./api/cars/id/') && request.method === 'GET') {
+            const words = filePath.split('/');
+            carController.getById(request, response, words[4]);
+        }
+        if (filePath == './api/cars' && request.method === 'POST') {
+            carController.insert(request, response);
+        }
+        if (filePath.includes('./api/cars') && request.method === 'PUT') {
+            const words = filePath.split('/');
+            carController.update(request, response, words[3]);
+        }
+        if (filePath.includes('./api/cars') && request.method === 'DELETE') {
+            const words = filePath.split('/');
+            carController.delete(request, response, words[3]);
+        }
     } else {
         if (filePath == './') {
             filePath = './Interfata/index.html';
@@ -68,7 +89,6 @@ function handleRequest(request, response) {
             }
         });
     }
-
 }
 
 module.exports = { handleRequest }
