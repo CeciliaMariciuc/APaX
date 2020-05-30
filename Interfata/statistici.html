@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<script src="responsive.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Interfata/style.css">
+    <script src="./Interfata/responsive.js"></script>
     <title>Auto Park Web Explorer</title>
 </head>
 
@@ -14,14 +14,14 @@
         <nav>
             <ul>
                 <li>
-				    <a href="index.html" class="logo">Auto Park Web Explorer</a>
-					<button onclick="myFunction()" id="menu-button">
+                    <a href="/" class="logo">Auto Park Web Explorer</a>
+                    <button onclick="myFunction()" id="menu-button">
 				    <i class="fa fa-bars fa-lg" ></i>
 					</button>
-			     </li>
-                <li class="menu" ><a href="statistici.html">Statistici</a></li>
-                <li class="menu"><a href="harta.html">Harta</a></li>
-                <li class="menu"><a href="despre.html">Despre</a></li>
+                </li>
+                <li class="menu"><a href="/statistici">Statistici</a></li>
+                <li class="menu"><a href="/harta">Harta</a></li>
+                <li class="menu"><a href="/despre">Despre</a></li>
             </ul>
         </nav>
         <div class="help">
@@ -32,7 +32,7 @@
         <p id="mesaj_bunvenit">Bun venit!</p>
     </div>
     <div id="main">
-	<!--
+        <!--
         <aside>
             <p id="format">Vizualizare: </p>
             <a href="#0" class="formatbutton">România</a>
@@ -41,19 +41,19 @@
         </aside>
      -->
         <div id="vizualizare">
-		    <div id="opt_section">
-              <h1>Distributia parcului auto in România</h1>
-              <p>Selectați opțiunile dorite:</p>
-              <form id="optiuni_vizualizare">
-			     <label for="format">Judet:</label>
-                 <input type="text" id="judet_opt" name="judet" placeholder="Alege judet">
-			     <label for="format">Categorie nationala:</label>
-			     <input type="text" id="categ_nat_opt" name="marca" placeholder="Alege categoria">
-			     <label for="format">Marca:</label>
-			     <input type="text" id="marca_opt" name="marca" placeholder="Alege marca">
-			     <input type="submit" value="Generează">
-	          </form>
-			</div>
+            <div id="opt_section">
+                <h1>Distributia parcului auto in România</h1>
+                <p>Selectați opțiunile dorite:</p>
+                <form id="optiuni_vizualizare">
+                    <label for="format">Judet:</label>
+                    <input type="text" id="judet_opt" name="judet" placeholder="Alege judet">
+                    <label for="format">Categorie nationala:</label>
+                    <input type="text" id="categ_nat_opt" name="marca" placeholder="Alege categoria">
+                    <label for="format">Marca:</label>
+                    <input type="text" id="marca_opt" name="marca" placeholder="Alege marca">
+                    <input type="submit" value="Generează">
+                </form>
+            </div>
             <div id="testchart">
                 <svg>
                           <circle class="outline" r="100" cx="210" cy="200"/>
@@ -100,9 +100,9 @@
                     
                           </svg>
             </div>
-			<form id="export_form">
-			  <label for="format">Formate:</label>
-              <select>
+            <form id="export_form">
+                <label for="format">Formate:</label>
+                <select>
                  <option value="SVG">SVG</option>
                  <option value="CSV">CSV</option>
 		         <option value="WebP">WebP</option>
