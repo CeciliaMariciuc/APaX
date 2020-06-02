@@ -1,7 +1,9 @@
 "use strict"
+var url = require('url');
 const assert = require('assert');
 var MongoDao = require('../Repository/mongodao');
 var CarRepository = require('../Repository/CarRepository')
+var FilterEntry = require('./FilterEntry')
 
 class CarController {
     constructor() {
@@ -32,7 +34,30 @@ class CarController {
 
     getAll(request, response) {
         this.carRepository.findAll().then((data) => {
-            //console.log(data);
+            response.statusCode = 200;
+            response.setHeader('Content-Type', 'application/json');
+            response.end(JSON.stringify(data));
+        }).catch((error) => {
+            console.log("Error:" + error);
+        });
+    }
+
+    getFiltered(request, response) {
+        var stringQuery = new FilterEntry(request.url);
+        var query = stringQuery.getQuery();
+        this.carRepository.findFiltered(query).then((data) => {
+            response.statusCode = 200;
+            response.setHeader('Content-Type', 'application/json');
+            response.end(JSON.stringify(data));
+        }).catch((error) => {
+            console.log("Error:" + error);
+        });
+    }
+
+    getSum(request, response) {
+        var stringQuery = new FilterEntry(request.url);
+        var query = stringQuery.getQuery();
+        this.carRepository.sumTotal(query).then((data) => {
             response.statusCode = 200;
             response.setHeader('Content-Type', 'application/json');
             response.end(JSON.stringify(data));

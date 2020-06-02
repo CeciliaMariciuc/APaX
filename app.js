@@ -23,6 +23,12 @@ function handleRequest(request, response, next) {
             const words = filePath.split('/');
             carController.getById(request, response, words[4]);
         }
+        if (filePath.includes('./api/cars/filter') && request.method === 'GET') {
+            carController.getFiltered(request, response);
+        }
+        if (filePath.includes('./api/cars/sum') && request.method === 'GET') {
+            carController.getSum(request, response);
+        }
         if (filePath == './api/cars' && request.method === 'POST') {
             carController.insert(request, response);
         }
