@@ -9,11 +9,11 @@ class CarRepository {
         this.db = MongoDao.getDb();
     }
 
-    findOne() {
+    findOne(collection) {
         try {
             var db = MongoDao.getDb();
             var promise = new Promise((resolve, reject) => {
-                db.collection('cars').findOne({}, (err, item) => {
+                db.collection(collection).findOne({}, (err, item) => {
                     err
                         ?
                         reject(err) :
@@ -31,11 +31,11 @@ class CarRepository {
         }
     }
 
-    findById(id) {
+    findById(collection, id) {
         try {
             var db = MongoDao.getDb();
             var promise = new Promise((resolve, reject) => {
-                db.collection('cars').findOne({ _id: new ObjectId(id) }, (err, item) => {
+                db.collection(collection).findOne({ _id: new ObjectId(id) }, (err, item) => {
                     err
                         ?
                         reject(err) :
@@ -52,12 +52,12 @@ class CarRepository {
         }
     }
 
-    findAll() {
+    findAll(collection) {
         try {
             var db = MongoDao.getDb();
             var collection = db.collection('cars');
             var promise = new Promise((resolve, reject) => {
-                db.collection('cars').find({}).toArray((err, items) => {
+                db.collection(collection).find({}).toArray((err, items) => {
                     err
                         ?
                         reject(err) :
@@ -102,14 +102,14 @@ class CarRepository {
         }
     }
 
-    findFiltered(filters) {
+    findFiltered(collection, filters) {
         try {
             var db = MongoDao.getDb();
             var collection = db.collection('cars');
             var promise = new Promise((resolve, reject) => {
-                /*var json = '{ "JUDET": "VASLUI", "CATEGORIE_COMUNITARA": "M3  " }';
-                var obj = JSON.parse(json);*/
-                db.collection('cars').find(filters).toArray((err, items) => {
+                var json = '{ "JUDET": "VASLUI", "CATEGORIE_COMUNITARA": "M3  " }';
+                var obj = JSON.parse(json);
+                db.collection(collection).find(filters).toArray((err, items) => {
                     err
                         ?
                         reject(err) :
@@ -126,36 +126,36 @@ class CarRepository {
         }
     }
 
-    insertOne(car) {
+    insertOne(collection, car) {
         try {
             //var db = MongoDao.getDb();
-            this.db.collection('cars').insertOne(car, (err, result) => {})
+            this.db.collection(collection).insertOne(car, (err, result) => {})
         } catch (err) {
             console.log(err);
         }
     }
 
-    updateOne(car, id) {
+    updateOne(collection, car, id) {
         try {
             //var db = MongoDao.getDb();
-            this.db.collection('cars').updateOne({ _id: new ObjectId(id) }, { $set: car }, (err, result) => {})
+            this.db.collection(collection).updateOne({ _id: new ObjectId(id) }, { $set: car }, (err, result) => {})
         } catch (err) {
             console.log(err);
         }
     }
 
-    deleteOne(id) {
+    deleteOne(collection, id) {
         try {
-            this.db.collection('cars').deleteOne({ _id: new ObjectId(id) }, (err, result) => {})
+            this.db.collection(collection).deleteOne({ _id: new ObjectId(id) }, (err, result) => {})
         } catch (err) {
             console.log(err);
         }
     }
-    sumTotal(query) {
+    sumTotal(collection, query) {
         try {
             var promise = new Promise((resolve, reject) => {
                 var suma = 0;
-                this.db.collection('cars').aggregate(
+                this.db.collection(collection).aggregate(
                     [{
                             $match: query
                         },
