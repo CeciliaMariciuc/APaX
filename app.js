@@ -13,26 +13,148 @@ function handleRequest(request, response, next) {
         console.log('Request Type: ' +
             request.method + ' Endpoint: ' +
             filePath);
-        if (filePath == './api/cars' && request.method === 'GET') {
-            carController.getAll(request, response);
+        //endpoints for 2015 
+        if (filePath == './api/2015' && request.method === 'GET') {
+            carController.getAll(request, response, '2015');
         }
-        if (filePath == './api/cars/one' && request.method === 'GET') {
-            carController.getOne(request, response);
+        if (filePath == './api/2015/one' && request.method === 'GET') {
+            carController.getOne(request, response, '2015');
         }
-        if (filePath.includes('./api/cars/id/') && request.method === 'GET') {
+        if (filePath.includes('./api/2015/id/') && request.method === 'GET') {
             const words = filePath.split('/');
-            carController.getById(request, response, words[4]);
+            carController.getById(request, response, '2015', words[4]);
         }
-        if (filePath == './api/cars' && request.method === 'POST') {
-            carController.insert(request, response);
+        if (filePath.includes('./api/2015/filter') && request.method === 'GET') {
+            carController.getFiltered(request, response, '2015');
         }
-        if (filePath.includes('./api/cars') && request.method === 'PUT') {
+        if (filePath.includes('./api/2015/sum') && request.method === 'GET') {
+            carController.getSum(request, response, '2015');
+        }
+        if (filePath == './api/2015' && request.method === 'POST') {
+            carController.insert(request, response, '2015');
+        }
+        if (filePath.includes('./api/2015') && request.method === 'PUT') {
             const words = filePath.split('/');
-            carController.update(request, response, words[3]);
+            carController.update(request, response, '2015', words[3]);
         }
-        if (filePath.includes('./api/cars') && request.method === 'DELETE') {
+        if (filePath.includes('./api/2015') && request.method === 'DELETE') {
             const words = filePath.split('/');
-            carController.delete(request, response, words[3]);
+            carController.delete(request, response, '2015', words[3]);
+        }
+        //endpoints for 2016
+        if (filePath == './api/2016' && request.method === 'GET') {
+            carController.getAll(request, response, '2016');
+        }
+        if (filePath == './api/2016/one' && request.method === 'GET') {
+            carController.getOne(request, response, '2016');
+        }
+        if (filePath.includes('./api/2016/id/') && request.method === 'GET') {
+            const words = filePath.split('/');
+            carController.getById(request, response, '2016', words[4]);
+        }
+        if (filePath.includes('./api/2016/filter') && request.method === 'GET') {
+            carController.getFiltered(request, response, '2016');
+        }
+        if (filePath.includes('./api/2016/sum') && request.method === 'GET') {
+            carController.getSum(request, response, '2016');
+        }
+        if (filePath == './api/2016' && request.method === 'POST') {
+            carController.insert(request, response, '2016');
+        }
+        if (filePath.includes('./api/2016') && request.method === 'PUT') {
+            const words = filePath.split('/');
+            carController.update(request, response, '2016', words[3]);
+        }
+        if (filePath.includes('./api/2016') && request.method === 'DELETE') {
+            const words = filePath.split('/');
+            carController.delete(request, response, '2016', words[3]);
+        }
+
+        //endpoints for 2017
+        if (filePath == './api/2017' && request.method === 'GET') {
+            carController.getAll(request, response, '2017');
+        }
+        if (filePath == './api/2017/one' && request.method === 'GET') {
+            carController.getOne(request, response, '2017');
+        }
+        if (filePath.includes('./api/2017/id/') && request.method === 'GET') {
+            const words = filePath.split('/');
+            carController.getById(request, response, '2017', words[4]);
+        }
+        if (filePath.includes('./api/2017/filter') && request.method === 'GET') {
+            carController.getFiltered(request, response, '2017');
+        }
+        if (filePath.includes('./api/2017/sum') && request.method === 'GET') {
+            carController.getSum(request, response, '2017');
+        }
+        if (filePath == './api/2017' && request.method === 'POST') {
+            carController.insert(request, response, '2017');
+        }
+        if (filePath.includes('./api/2017') && request.method === 'PUT') {
+            const words = filePath.split('/');
+            carController.update(request, response, '2017', words[3]);
+        }
+        if (filePath.includes('./api/2017') && request.method === 'DELETE') {
+            const words = filePath.split('/');
+            carController.delete(request, response, '2017', words[3]);
+        }
+
+        //endpoints for 2018
+        if (filePath == './api/2018' && request.method === 'GET') {
+            carController.getAll(request, response, '2018');
+        }
+        if (filePath == './api/2018/one' && request.method === 'GET') {
+            carController.getOne(request, response, '2018');
+        }
+        if (filePath.includes('./api/2018/id/') && request.method === 'GET') {
+            const words = filePath.split('/');
+            carController.getById(request, response, '2018', words[4]);
+        }
+        if (filePath.includes('./api/2018/filter') && request.method === 'GET') {
+            carController.getFiltered(request, response, '2018');
+        }
+        if (filePath.includes('./api/2018/sum') && request.method === 'GET') {
+            carController.getSum(request, response, '2018');
+        }
+        if (filePath == './api/2018' && request.method === 'POST') {
+            carController.insert(request, response, '2018');
+        }
+        if (filePath.includes('./api/2018') && request.method === 'PUT') {
+            const words = filePath.split('/');
+            carController.update(request, response, '2018', words[3]);
+        }
+        if (filePath.includes('./api/2018') && request.method === 'DELETE') {
+            const words = filePath.split('/');
+            carController.delete(request, response, '2018', words[3]);
+        }
+
+        //endpoints for 2019
+        if (filePath == './api/2019' && request.method === 'GET') {
+            carController.getAll(request, response, '2019');
+        }
+        if (filePath == './api/2019/one' && request.method === 'GET') {
+            carController.getOne(request, response, '2019');
+        }
+        if (filePath.includes('./api/2019/id/') && request.method === 'GET') {
+            const words = filePath.split('/');
+            carController.getById(request, response, '2019', words[4]);
+        }
+        if (filePath.includes('./api/2019/filter') && request.method === 'GET') {
+            carController.getFiltered(request, response, '2019');
+        }
+        if (filePath.includes('./api/2019/sum') && request.method === 'GET') {
+            carController.getSum(request, response, '2019');
+        }
+        if (filePath == './api/2019' && request.method === 'POST') {
+            carController.insert(request, response, '2019');
+        }
+        if (filePath.includes('./api/2019') && request.method === 'PUT') {
+            const words = filePath.split('/');
+            carController.update(request, response, '2019', words[3]);
+        }
+        if (filePath.includes('./api/2019') && request.method === 'DELETE') {
+            const words = filePath.split('/');
+            carController.delete(request, response, '2019', words[3]);
         }
     } else {
         if (filePath == './') {

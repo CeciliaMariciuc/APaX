@@ -9,11 +9,11 @@ class CarRepository {
         this.db = MongoDao.getDb();
     }
 
-    findOne() {
+    findOne(collection) {
         try {
             var db = MongoDao.getDb();
             var promise = new Promise((resolve, reject) => {
-                db.collection('cars').findOne({}, (err, item) => {
+                db.collection(collection).findOne({}, (err, item) => {
                     err
                         ?
                         reject(err) :
@@ -31,11 +31,11 @@ class CarRepository {
         }
     }
 
-    findById(id) {
+    findById(collection, id) {
         try {
             var db = MongoDao.getDb();
             var promise = new Promise((resolve, reject) => {
-                db.collection('cars').findOne({ _id: new ObjectId(id) }, (err, item) => {
+                db.collection(collection).findOne({ _id: new ObjectId(id) }, (err, item) => {
                     err
                         ?
                         reject(err) :
@@ -52,12 +52,12 @@ class CarRepository {
         }
     }
 
-    findAll() {
+    findAll(collection) {
         try {
             var db = MongoDao.getDb();
             var collection = db.collection('cars');
             var promise = new Promise((resolve, reject) => {
-                db.collection('cars').find({}).toArray((err, items) => {
+                db.collection(collection).find({}).toArray((err, items) => {
                     err
                         ?
                         reject(err) :
@@ -102,64 +102,105 @@ class CarRepository {
         }
     }
 
-    insertOne(car) {
+    findFiltered(collection, filters) {
         try {
-            //var db = MongoDao.getDb();
-            this.db.collection('cars').insertOne(car, (err, result) => {})
+            var db = MongoDao.getDb();
+            var collection = db.collection('cars');
+            var promise = new Promise((resolve, reject) => {
+                var json = '{ "JUDET": "VASLUI", "CATEGORIE_COMUNITARA": "M3  " }';
+                var obj = JSON.parse(json);
+                db.collection(collection).find(filters).toArray((err, items) => {
+                    err
+                        ?
+                        reject(err) :
+                        resolve(items);
+
+                });
+            }).then(result => {
+                return result;
+            });
+
+            return promise;
         } catch (err) {
             console.log(err);
         }
     }
 
-    updateOne(car, id) {
+    insertOne(collection, car) {
         try {
             //var db = MongoDao.getDb();
-            this.db.collection('cars').updateOne({ _id: new ObjectId(id) }, { $set: car }, (err, result) => {})
+            this.db.collection(collection).insertOne(car, (err, result) => {})
         } catch (err) {
             console.log(err);
         }
     }
 
-    deleteOne(id) {
-            try {
-                this.db.collection('cars').deleteOne({ _id: new ObjectId(id) }, (err, result) => {})
-            } catch (err) {
-                console.log(err);
-            }
+    updateOne(collection, car, id) {
+        try {
+            //var db = MongoDao.getDb();
+            this.db.collection(collection).updateOne({ _id: new ObjectId(id) }, { $set: car }, (err, result) => {})
+        } catch (err) {
+            console.log(err);
         }
-        /*de reparat...
-            sumTotal() {
-                try {
+    }
 
-                    var promise = new Promise((resolve, reject) => {
-                        MongoDao.connectToServer(function(err, client) {
+    deleteOne(collection, id) {
+        try {
+            this.db.collection(collection).deleteOne({ _id: new ObjectId(id) }, (err, result) => {})
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    sumTotal(collection, query) {
+        try {
+            var promise = new Promise((resolve, reject) => {
+                var suma = 0;
+                this.db.collection(collection).aggregate(
+                    [{
+                            $match: query
+                        },
+                        { $group: { _id: null, "sum": { "$sum": "$TOTAL_VEHICULE" } } }
+                    ],
+                    function(err, res) {
+                        console.log(res);
+                        resolve(res[0].sum);
+                    }
+                )
+            }).then(result => {
+                return result;
+            });
+            return promise;
+            /*
+                        var ct = 0;
+                        var promise = new Promise((resolve, reject) => {
                             var suma = 0;
-                            var db = MongoDao.getDb();
-                            var cursor = db.collection('cars').find({ "JUDET": "VASLUI" }).project({});
-                            cursor.forEach(element => {
-                                if (element["TOTAL_VEHICULE"]) { suma = suma + element["TOTAL_VEHICULE"]; }
+                            var cursor = this.db.collection('cars').find({ "MARCA": "DAC" }).project({});
+
+                            function processItem(err, item) {
+                                if (item === null || item == undefined) {
+                                    resolve(suma);
+                                    return;
+                                } else {
+                                    if (item != undefined)
+                                        if (item["TOTAL_VEHICULE"]) { suma = suma + item["TOTAL_VEHICULE"]; }
+                                    cursor.next(processItem); // continue looping
+                                }
                                 console.log(suma);
-                            })
-                            resolve(suma);
-                        });
-                    }).then(result => {
-                        return result;
-                    });
-                    return promise;
-                    
-                    MongoDao.connectToServer(function(err, client) {
-                        var db = MongoDao.getDb();
-                        db.collection('cars').aggregate(
-                            [{ $group: { _id: null, "sum": { "$sum": "$TOTAL_VEHICULE" } } }],
-                            function(err, res) {
-                                console.log(res);
                             }
-                        )
-                    });
-} catch (err) {
-    console.log(err);
-}
-}*/
+                            cursor.count(function(err, count) {
+                                console.log('resultCursor size=' + count);
+                                cursor.next(processItem); // Start of the loop
+                                //resolve(count);
+                            });
+                        }).then(result => {
+                            return result;
+                        });
+                        return promise;
+                        */
+        } catch (err) {
+            console.log(err);
+        }
+    }
 }
 
 module.exports = CarRepository;
