@@ -1,6 +1,5 @@
 //https://code.tutsplus.com/tutorials/how-to-draw-bar-charts-using-javascript-and-html5-canvas--cms-28561
 
-
 function drawLine(ctx, startX, startY, endX, endY, color) {
     ctx.save();
     ctx.strokeStyle = color;
@@ -48,7 +47,7 @@ var Barchart = function(options) {
             //writing grid markers
             this.ctx.save();
             this.ctx.fillStyle = this.options.gridColor;
-            this.ctx.font = "bold 10px Arial";
+            this.ctx.font = "bold 11px Arial";
             this.ctx.fillText(gridValue, 10, gridY - 2);
             this.ctx.restore();
 
@@ -78,12 +77,12 @@ var Barchart = function(options) {
         this.ctx.textBaseline = "bottom";
         this.ctx.textAlign = "center";
         this.ctx.fillStyle = "#000000";
-        this.ctx.font = "bold 14px Arial";
+        this.ctx.font = "bold 20px";
         this.ctx.fillText(this.options.seriesName, this.canvas.width / 2, this.canvas.height);
         this.ctx.restore();
 
         barIndex = 0;
-        var legend = document.querySelector("legend[for='barChartCombustibil']");
+        var legend = document.querySelector("legend[for='chartCombustibil']");
         var ul = document.createElement("ul");
         legend.append(ul);
         //legenda

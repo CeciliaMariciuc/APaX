@@ -27,11 +27,11 @@
                 <li class="menu"><a href="/statistici">Statistici</a></li>
                 <li class="menu"><a href="/harta">Harta</a></li>
                 <li class="menu"><a href="/vizualizare">Vizualizare</a></li>
-                <li class="menu"><a href="/despre">Despre</a></li>
+                <li class="menu"><a href="#0">Despre</a></li>
             </ul>
         </nav>
         <div class="help">
-            <a href="#0" id="helpButton">Ajutor</a>
+            <a href="/ajutor" id="helpButton">Ajutor</a>
         </div>
     </header>
     <div id="banner">
@@ -138,7 +138,7 @@
                 <p>Alte statistici interesante: </p>
                 <div id="opt_sectionCombustibil">
                     <h1>Procente utilizare combustibil pe ani</h1>
-                    <form id="optiuni_vizualizare">
+                    <form id="optiuni_vizualizare_comb">
                     <label for="format">An:</label>
                     <select name="an_opt" id="an_opt_combust">
                         <option value="2015">2015</option>
@@ -204,8 +204,17 @@
         </div>
         <canvas id="chartCombustibil">
         </canvas>
-        <legend for="chartCombustibil"></legend>
+        <legend for="chartCombustibil" id="legendCombustibil"></legend>
         <div id="legendaCombustibil"></div>
+        <form id="export_form_combust">
+            <label for="format">Formate:</label>
+            <select id="export_opt_combust">
+             <option value="SVG">SVG</option>
+             <option value="CSV">CSV</option>
+             <option value="WebP">WebP</option>
+          <select>
+            <button type="button" id="exportaCombustibil">Exporta</button>
+        </form>
     </div>
     </div>
     </div>

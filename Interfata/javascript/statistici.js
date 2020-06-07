@@ -1,3 +1,21 @@
+var currentDataDistributie = [];
+var currentDataCombutsibil = []
+
+function setCurrentDataDistributie(data) {
+    currentDataDistributie = data;
+}
+
+function setCurrentDataCombustibil(data) {
+    currentDataCombutsibil = data;
+}
+
+function removeLegendData() {
+    const legendData = document.getElementById("legendCombustibil");
+    while (legendData.firstChild) {
+        legendData.removeChild(legendData.lastChild);
+    }
+}
+
 async function fetchCategNationalaData(url) {
     return Promise.all([
         fetch(url + '&categorie_nationala=Autotractor').then(resp => resp.json()),
@@ -141,6 +159,7 @@ window.onload = function() {
                         colors: ["#0A9669", "#0A9596", "#075C91", "#230791", "#660791", "#91078A"],
                         legend: myLegend
                     });
+                    setCurrentDataDistributie(categoriaM);
                 }
                 if (selectCategorie.value == 'N') {
                     myPiechart = new Piechart({
@@ -149,6 +168,7 @@ window.onload = function() {
                         colors: ["#0A9669", "#0A9596", "#075C91", "#230791", "#660791", "#91078A"],
                         legend: myLegend
                     });
+                    setCurrentDataDistributie(categoriaN);
                 }
                 if (selectCategorie.value == 'O') {
                     myPiechart = new Piechart({
@@ -157,6 +177,7 @@ window.onload = function() {
                         colors: ["#0A9669", "#0A9596", "#075C91", "#230791", "#660791", "#91078A"],
                         legend: myLegend
                     });
+                    setCurrentDataDistributie(categoriaO);
                 }
                 if (selectCategorie.value == 'L') {
                     myPiechart = new Piechart({
@@ -165,6 +186,7 @@ window.onload = function() {
                         colors: ["#0A9669", "#0A9596", "#075C91", "#230791", "#660791", "#91078A"],
                         legend: myLegend
                     });
+                    setCurrentDataDistributie(categoriaL);
                 }
                 if (selectCategorie.value == 'T') {
                     myPiechart = new Piechart({
@@ -173,6 +195,7 @@ window.onload = function() {
                         colors: ["#0A9669", "#0A9596", "#075C91", "#230791", "#660791", "#91078A"],
                         legend: myLegend
                     });
+                    setCurrentDataDistributie(categoriaT);
                 }
 
                 myPiechart.draw();
@@ -189,6 +212,7 @@ window.onload = function() {
             }
 
             const context = canvasCombustibil.getContext('2d');
+            removeLegendData();
 
             context.clearRect(0, 0, canvasCombustibil.width, canvasCombustibil.height);
 
@@ -201,18 +225,20 @@ window.onload = function() {
                     legend: myLegend
                 });
                 myPiechart.draw();
+                setCurrentDataCombustibil(sumCombustibil);
             } else {
 
                 var myBarchart = new Barchart({
                     canvas: canvasCombustibil,
                     seriesName: "Procente utilizare combustibil",
-                    padding: 10,
-                    gridScale: 5,
-                    gridColor: "#eeeeee",
+                    padding: 40,
+                    gridScale: 10000,
+                    gridColor: "#4d4d4d",
                     data: sumCombustibil,
                     colors: ["#a55ca5", "#67b6c7", "#bccd7a", "#eb9743"]
                 });
                 myBarchart.draw();
+                setCurrentDataCombustibil(sumCombustibil);
             }
 
         })
@@ -220,10 +246,22 @@ window.onload = function() {
 
     var exporta = document.getElementById("exporta");
     var selectFormatExport = document.getElementById('export_opt');
+
+    var exportaCombustibil = document.getElementById("exportaCombustibil");
+    var selectFormatExportCombustibil = document.getElementById('export_opt_combust');
+    exportaCombustibil.onclick =
+        function() {
+            var data = currentDataCombutsibil;
+            if (selectFormatExportCombustibil.value == 'SVG') exportSVG("combustibil.svg");
+            else if (selectFormatExportCombustibil.value == 'WebP') exportWebP("combustibil.webp", "chartCombustibil");
+            else exportCSV("combustibil.csv", data);
+        }
+
     exporta.onclick =
         function() {
-            if (selectFormatExport.value == 'SVG') exportSVG();
-            else if (selectFormatExport.value == 'WebP') exportWebP("date.webp");
-            else exportCSV();
+            var data = currentDataDistributie;
+            if (selectFormatExport.value == 'SVG') exportSVG("date.svg");
+            else if (selectFormatExport.value == 'WebP') exportWebP("date.webp", "pieChartDistributie");
+            else exportCSV("date.csv", data);
         }
 }

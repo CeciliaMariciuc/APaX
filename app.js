@@ -172,6 +172,9 @@ function handleRequest(request, response, next) {
         if (filePath == './vizualizare') {
             filePath = './Interfata/vizualizare.html'
         }
+        if (filePath == './ajutor') {
+            filePath = './Interfata/ajutor.html'
+        }
 
         //codul de mai jos -> preluat de pe https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework
         var extname = String(path.extname(filePath)).toLowerCase();

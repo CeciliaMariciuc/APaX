@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Interfata/style.css">
+    <script src="./Interfata/responsive.js"></script>
+    <title>Auto Park Web Explorer</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/" class="logo">Auto Park Web Explorer</a>
+                    <button onclick="myFunction()" id="menu-button">
+				    <i class="fa fa-bars fa-lg" ></i>
+					</button>
+                </li>
+                <li class="menu"><a href="/statistici">Statistici</a></li>
+                <li class="menu"><a href="/harta">Harta</a></li>
+                <li class="menu"><a href="#0">Despre</a></li>
+                <li class="menu"><a href="#0">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="help">
+            <a href="#0" id="helpButton">Ajutor</a>
+        </div>
+    </header>
+    <div id="main">
+        <div id="bodyIntrebari">
+            Posibile intrebari:
+            <div class="intrebare">
+                <div>Unde pot vedea datele parcului auto pentru judetul in care locuiesc?
+                    <i class="fa fa-chevron-down" aria-hidden="true" onclick="showRaspuns('raspuns1')"></i>
+                </div>
+                <div class="raspuns" id="raspuns1">
+                    Acceseaza pagina "Vizualizare" si selecteaza judetul dorit!
+                </div>
+            </div>
+            <div class="intrebare">
+                <div>
+                    Dupa ce generez o statistica cum o salvez pe dispozitivul personal?
+                    <i class="fa fa-chevron-down" aria-hidden="true" onclick="showRaspuns('raspuns2')"></i>
+                </div>
+                <div class="raspuns" id="raspuns2">
+                    Sub fiecare statistica generata se afla un buton de export. Alegeti formatul dorit(WebP, SVG, CSV) si apasati "Exporta"
+                </div>
+            </div>
+            <div class="intrebare">
+                <div>
+                    As dori sa las un mesaj administratorilor site-ului
+                    <i class="fa fa-chevron-down" aria-hidden="true" onclick="showRaspuns('raspuns3')"></i>
+                </div>
+                <div class="raspuns" id="raspuns3">
+                    In cadrul paginii despre gasesti un formular de contact prin care iti poti transmite nemultumirile, aprecierile sau alte intrebari.
+                </div>
+            </div>
+            <div class="intrebare">
+                <div>
+                    De unde au fost preluate datele folosite pentru statistici si vizualizare?
+                    <i class="fa fa-chevron-down" aria-hidden="true" onclick="showRaspuns('raspuns4')"></i>
+                </div>
+                <div class="raspuns" id="raspuns4">
+                    Datele au fost preluate de la Institutia: Direcţia Regim Permise de Conducere şi Înmatriculare a Vehiculelor si se gasesc pe site-ul urmator : Direcţia Regim Permise de Conducere şi Înmatriculare a Vehiculelor: https://data.gov.ro/dataset/parc-auto-romania
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer-stanga">
+            <p id="footer_header">Proiect APaX( Tehnologii Web ) </p>
+            <p>@Site realizat de Mariciuc Cecilia si Mariciuc Ovidiu</p>
+        </div>
+        <div id="footer-centru">
+            <p id="footer_header">Link-uri rapide </p>
+            <p>Github</p>
+            <p>Link</p>
+        </div>
+        <div id="footer-dreapta">
+            <p id="footer_header">Contact </p>
+            <p>Telefon : 0707070707</p>
+            <p>Email : ovidiumariciuc99@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
