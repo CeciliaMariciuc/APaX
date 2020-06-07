@@ -33,6 +33,7 @@ class CarController {
     }
 
     getAll(request, response, collection) {
+        console.log(collection);
         this.carRepository.findAll(collection).then((data) => {
             response.statusCode = 200;
             response.setHeader('Content-Type', 'application/json');

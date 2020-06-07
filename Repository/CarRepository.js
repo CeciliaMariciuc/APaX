@@ -33,9 +33,11 @@ class CarRepository {
 
     findById(collection, id) {
         try {
+            console.log(collection);
             var db = MongoDao.getDb();
+            var collection = db.collection(collection);
             var promise = new Promise((resolve, reject) => {
-                db.collection(collection).findOne({ _id: new ObjectId(id) }, (err, item) => {
+                collection.findOne({ _id: new ObjectId(id) }, (err, item) => {
                     err
                         ?
                         reject(err) :
@@ -55,9 +57,9 @@ class CarRepository {
     findAll(collection) {
         try {
             var db = MongoDao.getDb();
-            var collection = db.collection('cars');
+            var collection = db.collection(collection);
             var promise = new Promise((resolve, reject) => {
-                db.collection(collection).find({}).toArray((err, items) => {
+                collection.find({}).toArray((err, items) => {
                     err
                         ?
                         reject(err) :
@@ -105,11 +107,11 @@ class CarRepository {
     findFiltered(collection, filters) {
         try {
             var db = MongoDao.getDb();
-            var collection = db.collection('cars');
+            var collection = db.collection(collection);
             var promise = new Promise((resolve, reject) => {
                 var json = '{ "JUDET": "VASLUI", "CATEGORIE_COMUNITARA": "M3  " }';
                 var obj = JSON.parse(json);
-                db.collection(collection).find(filters).toArray((err, items) => {
+                collection.find(filters).toArray((err, items) => {
                     err
                         ?
                         reject(err) :
@@ -163,40 +165,14 @@ class CarRepository {
                     ],
                     function(err, res) {
                         console.log(res);
-                        resolve(res[0].sum);
+                        if (res[0] == undefined) resolve(0);
+                        else resolve(res[0].sum);
                     }
                 )
             }).then(result => {
                 return result;
             });
             return promise;
-            /*
-                        var ct = 0;
-                        var promise = new Promise((resolve, reject) => {
-                            var suma = 0;
-                            var cursor = this.db.collection('cars').find({ "MARCA": "DAC" }).project({});
-
-                            function processItem(err, item) {
-                                if (item === null || item == undefined) {
-                                    resolve(suma);
-                                    return;
-                                } else {
-                                    if (item != undefined)
-                                        if (item["TOTAL_VEHICULE"]) { suma = suma + item["TOTAL_VEHICULE"]; }
-                                    cursor.next(processItem); // continue looping
-                                }
-                                console.log(suma);
-                            }
-                            cursor.count(function(err, count) {
-                                console.log('resultCursor size=' + count);
-                                cursor.next(processItem); // Start of the loop
-                                //resolve(count);
-                            });
-                        }).then(result => {
-                            return result;
-                        });
-                        return promise;
-                        */
         } catch (err) {
             console.log(err);
         }

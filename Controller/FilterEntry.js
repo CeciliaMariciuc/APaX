@@ -13,22 +13,28 @@ class FilterEntry {
         var listParams = param.split('&');
         for (var i = 0; i < listParams.length; i++) {
             var field, fieldValue;
+
             field = listParams[i].split('=')[0];
             fieldValue = listParams[i].split('=')[1];
-            if (fieldValue.match("^[A-Za-z0-9]+$")) {
-                if (field != '_id') {
-                    field = field.toUpperCase();
-                    fieldValue = fieldValue.toUpperCase();
-                }
-                if (field != 'TOTAL_VEHICULE') {
-                    if (field == 'CATEGORIE_COMUNITARA') {
-                        query = query + '"' + field + '" :' + '"' + fieldValue + '  ",'
-
-                    } else {
-                        query = query + '"' + field + '" :' + '"' + fieldValue + '",'
+            if (fieldValue.includes("_")) {
+                fieldValue = fieldValue.replace(/_/g, " ");
+            }
+            if (fieldValue.match("^[A-Za-z0-9 ]+$") || fieldValue == '') {
+                if (fieldValue != 'Toata tara' && fieldValue != '' && fieldValue != 'Toate') {
+                    if (field != '_id') {
+                        field = field.toUpperCase();
+                        fieldValue = fieldValue.toUpperCase();
                     }
-                } else {
-                    query = query + '"' + field + '" :' + fieldValue + ','
+                    if (field != 'TOTAL_VEHICULE') {
+                        if (field == 'CATEGORIE_COMUNITARA') {
+                            query = query + '"' + field + '" :' + '"' + fieldValue + '  ",'
+
+                        } else {
+                            query = query + '"' + field + '" :' + '"' + fieldValue + '",'
+                        }
+                    } else {
+                        query = query + '"' + field + '" :' + fieldValue + ','
+                    }
                 }
             } else {
                 return JSON.parse('{}');

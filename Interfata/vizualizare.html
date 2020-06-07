@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Interfata/style.css">
+    <link rel="stylesheet" type="text/css" href="./Interfata/css/statistici.css">
+    <script src="./Interfata/javascript/vizualizare_date.js"></script>
+    <script src="./Interfata/responsive.js"></script>
+    <title>Auto Park Web Explorer</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/" class="logo">Auto Park Web Explorer</a>
+                    <button onclick="myFunction()" id="menu-button">
+				    <i class="fa fa-bars fa-lg" ></i>
+					</button>
+                </li>
+                <li class="menu"><a href="/statistici">Statistici</a></li>
+                <li class="menu"><a href="/harta">Harta</a></li>
+                <li class="menu"><a href="/vizualizare">Vizualizare</a></li>
+                <li class="menu"><a href="/despre">Despre</a></li>
+            </ul>
+        </nav>
+        <div class="help">
+            <a href="#0" id="helpButton">Ajutor</a>
+        </div>
+    </header>
+    <div id="banner">
+        <p id="mesaj_bunvenit">Bun venit!</p>
+    </div>
+    <div id="main">
+        <div id="vizualizare">
+            <div id="opt_section">
+                <h1>Vizualizare date in functie de preferinte, selectati filtrele dorite:</h1>
+                <form id="optiuni_vizualizare">
+                    <label for="format">An:</label>
+                    <select name="an_opt" id="an_opt">
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                        </select>
+                    <label for="format">Judet:</label>
+                    <select name="judet_opt" id="judet_opt">
+                    <option value="Toata_tara">Toata tara</option>
+                    <option value="Alba">Alba</option>
+                    <option value="Arad">Arad</option>
+                    <option value="Arges">Arges</option>
+                    <option value="Bacau">Bacau</option>
+                    <option value="Baia_Mare">Baia Mare</option>
+                    <option value="Bihor">Bihor</option>
+                    <option value="Bistrita-Nasaud">Bistrita-Nasaud</option>
+                    <option value="Botosani">Botosani</option>
+                    <option value="Brasov">Brasov</option>
+                    <option value="Braila">Brailia</option>
+                    <option value="Bucuresti">Bucuresti</option>
+                    <option value="Buzau">Buzau</option>
+                    <option value="Caras-Severin">Caras-Severin</option>
+                    <option value="Calarasi">Calarasi</option>
+                    <option value="Cluj">Cluj</option>
+                    <option value="Constanta">Constanta</option>
+                    <option value="Covasna">Covasna</option>
+                    <option value="Dambovita">Dambovita</option>
+                    <option value="Dolj">Dolj</option>
+                    <option value="Galati">Galati</option>
+                    <option value="Giurgiu">Giurgiu</option>
+                    <option value="Gorj">Gorj</option>
+                    <option value="Harghita">Harghita</option>
+                    <option value="Hunedoara">Hunedoara</option>
+                    <option value="Ialomita">Ialomita</option>
+                    <option value="Iasi">Iasi</option>
+                    <option value="Ilfov">Ilfov</option>
+                    <option value="Maramures">Maramures</option>
+                    <option value="Mehedinti">Mehedinti</option>
+                    <option value="Mures">Mures</option>
+                    <option value="Neamt">Neamt</option>
+                    <option value="Olt">Olt</option>
+                    <option value="Prahova">Prahova</option>
+                    <option value="Satu_Mare">Satu Mare</option>
+                    <option value="Salaj">Salaj</option>
+                    <option value="Sibiu">Sibiu</option>
+                    <option value="Suceava">Suceava</option>
+                    <option value="Teleorman">Teleorman</option>
+                    <option value="Timis">Timis</option>
+                    <option value="Tulcea">Tulcea</option>
+                    <option value="Vaslui">Vaslui</option>
+                    <option value="Vilcea">Valcea</option>
+                    <option value="Vrancea">Vrancea</option>
+                    </select>
+                    <label for="format">Categorie nationala:</label>
+                    <select id="categ_nat_opt" name="categorie_nationala">
+                            <option value="Autotractor">Autotractor</option>
+                            <option value="Motocar">Motocar</option>
+                            <option value="Autoremorcher">Autoremorcher</option>
+                            <option value="Motociclu_Special">Motociclu Special</option>
+                            <option value="Motocicleta">Motocicleta</option>
+                            <option value="Vehicul_Incomplet">Vehicul incomplet</option>
+                            <option value="Autopropulsata_lucrari">Autopropulsata lucrari</option>
+                            <option value="Remorca">Remorca</option>
+                            <option value="Autovehicul_special">Autovehicul special</option>
+                            <option value="Autospeciala">Autospeciala</option>
+                            <option value="Autoturism">Autoturism</option>
+                            <option value="Masina_Autopropulsata_pentru_lucrari">Autopropulsata pentru lucrari</option>
+                            <option value="Mototriciclu">Mototriciclu</option>
+                            <option value="Tractor_rutier">Tractor rutier</option>
+                            <option value="Autoutilitara">Autoutilitara</option>
+                            <option value="Microbuz">Microbuz</option>
+                            <option value="Motociclu">Motociclu</option>
+                            <option value="Autobuz">Autobuz</option>
+                            <option value="Motoreta">Motoreta</option>
+                            <option value="Autovehicul_atipic">Autovehicul atipic</option>
+                            <option value="Motocvadriclu">Motocvadriclu</option>
+                            <option value="Moped">Moped</option>
+                            <option value="Automobil_mixt">Automobil mixt</option>
+                            <option value="Autorulota">Mototriciclu</option>
+                            <option value="Autospecializata">Autospecializata</option>
+                            <option value="Scuter">Scuter</option>
+                            <option value="Tractor">Tractor</option>
+                            <option value="Semiremorca">Semiremorca</option>
+                            <option value="Toate">Toate</option>
+                        </select>
+                    <label for="format">Marca: </label>
+                    <input type="text" id="marca_opt" name="marca" value="Renault">
+                    <!--<input type="submit" id="genereaza" value="Generează"> -->
+                    <button type="button" id="printValue">Genereaza</button>
+                </form>
+            </div>
+
+            <div id="tabelVizualizare">
+                <table id="tabel">
+                </table>
+                <div id="noData">
+                    <p>Ne pare rau! Nu au fost gasite date care sa corespunda cautarii dumneavoastra!</p>
+                    <p>Selectati alte optiuni pentru a incerca din nou!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Footer
+    </footer>
+</body>
+
+</html>

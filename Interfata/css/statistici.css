@@ -1,0 +1,140 @@
+#main {
+    flex-flow: column;
+}
+
+legend {
+    display: flex;
+}
+
+#pieChartDistributie {
+    padding-top: 30px;
+}
+
+#legendaPie {
+    display: flex;
+}
+
+.legendRow {
+    font-weight: bold;
+}
+
+#noData {
+    display: none;
+    font-size: 18px;
+}
+
+#tabelVizualizare {
+    max-height: 500px;
+    font-size: medium;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    border-collapse: collapse;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+#tabelVizualizare>table>thead {
+    font-weight: bold;
+}
+
+#tabelVizualizare td,
+#tabelVizualizare th {
+    text-align: center;
+    padding: 8px;
+}
+
+#tabelVizualizare td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+#tabelVizualizare thead th {
+    color: #ffffff;
+    background: #63a6a4;
+}
+
+#tabelVizualizare thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+#tabelVizualizare tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+#tabelVizualizare tr:hover {
+    background-color: rgb(209, 205, 205);
+}
+
+@media (max-width: 767px) {
+    #tabelVizualizare {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    #tabelVizualizare thead,
+    #tabelVizualizare tbody,
+    #tabelVizualizare thead th {
+        display: block;
+    }
+    #tabelVizualizare thead th:last-child {
+        border-bottom: none;
+    }
+    #tabelVizualizare thead {
+        float: left;
+    }
+    #tabelVizualizare tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    #tabelVizualizare td,
+    #tabelVizualizare th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    #tabelVizualizare thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    #tabelVizualizare tbody tr {
+        display: table-cell;
+    }
+    #tabelVizualizare tbody tr:nth-child(odd) {
+        background: none;
+    }
+    #tabelVizualizare tr:nth-child(even) {
+        background: transparent;
+    }
+    #tabelVizualizare tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    #tabelVizualizare tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    #tabelVizualizare tbody td {
+        display: block;
+        text-align: center;
+    }
+}
