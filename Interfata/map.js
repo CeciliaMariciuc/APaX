@@ -1774,4 +1774,92 @@ function initMap() {
             });
 
         })
+
+        /*Judetul Satu Mare
+
+        var satumare = {
+            lat: 47.790001,
+            lng: 22.889999
+        };
+
+        var markerSM = new google.maps.Marker({
+            position: satumare,
+            map: map,
+            title: 'Satu Mare',
+            icon: {
+                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                scale: 5,
+                strokeColor: "#7fd4d2"
+            }
+        });
+
+        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
+        .then((data) => {
+            console.log(JSON.stringify(data));
+
+
+            var contentStringSM =
+                '<div class ="infoWindow">' +
+                '<h1 class = "infoHeading">Date Judet Satu Mare:</h1>' +
+                '<p> Numar total de masini pe ani: </p> ' +
+                '<p> 2015 ->  ' + JSON.stringify(data[0]) + '</p>' +
+                '<p> 2016 ->  ' + JSON.stringify(data[1]) + '</p>' +
+                '<p> 2017 ->  ' + JSON.stringify(data[2]) + '</p>' +
+                '<p> 2018 ->  ' + JSON.stringify(data[3]) + '</p>' +
+                '<p> 2019 ->  ' + JSON.stringify(data[4]) + '</p>' +
+                '</div>';
+            var infowindowSM = new google.maps.InfoWindow({
+                content: contentStringSM,
+                maxWidth: 200
+            });
+
+            markerSM.addListener('click', function() {
+                infowindowSM.open(map, markerSM);
+            });
+
+        })*/
+
+        /*Judetul Maramures
+
+        var satumare = {
+            lat: 47.6572914,
+            lng: 23.5680809
+        };
+
+        var markerMA = new google.maps.Marker({
+            position: maramures,
+            map: map,
+            title: 'Maramures',
+            icon: {
+                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                scale: 5,
+                strokeColor: "#7fd4d2"
+            }
+        });
+
+        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
+        .then((data) => {
+            console.log(JSON.stringify(data));
+
+
+            var contentStringMA =
+                '<div class ="infoWindow">' +
+                '<h1 class = "infoHeading">Date Judet Maramures:</h1>' +
+                '<p> Numar total de masini pe ani: </p> ' +
+                '<p> 2015 ->  ' + JSON.stringify(data[0]) + '</p>' +
+                '<p> 2016 ->  ' + JSON.stringify(data[1]) + '</p>' +
+                '<p> 2017 ->  ' + JSON.stringify(data[2]) + '</p>' +
+                '<p> 2018 ->  ' + JSON.stringify(data[3]) + '</p>' +
+                '<p> 2019 ->  ' + JSON.stringify(data[4]) + '</p>' +
+                '</div>';
+            var infowindowMA = new google.maps.InfoWindow({
+                content: contentStringMA,
+                maxWidth: 200
+            });
+
+            markerMA.addListener('click', function() {
+                infowindowMA.open(map, markerMA);
+            });
+
+        })*/
 }
