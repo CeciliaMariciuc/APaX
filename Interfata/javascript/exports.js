@@ -29,14 +29,7 @@ function exportSVG(file, data) {
     var svg = '<?xml version="1.0" standalone="yes"?>';
     svg += '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
     svg += '<svg width="1065px" height="529px" xmlns="http://www.w3.org/2000/svg" version="1.1">';
-    /*
-        for (var i = 0; i < myPoints.length; i++) {
-            svg += "M" + myPoints.x[i] + "," + myPoints.y[i] + " ";
-            svg += "L" + myPoints.x[i + 1] + "," + myPoints.y[i + 1];
-            svg += '" fill="none" stroke="rgb(' + color + ')" stroke-opacity="' + opacity + '" stroke-width="' + size + 'px" stroke-linecap="round" stroke-linejoin="round" />';
-        }
-        svg += "</svg>";
-    */
+
     saveAs(new Blob([svg], { type: "application/svg+xml" }), "file");
 
 }
