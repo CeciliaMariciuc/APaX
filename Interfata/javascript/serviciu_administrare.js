@@ -63,6 +63,7 @@ function showOperatie(operatie) {
 window.onload = function() {
     var operatie = document.getElementById('operatie_opt');
     var alegeOperatie = document.getElementById('operatieAleasa');
+    var colectie = document.getElementById('colectie_an_opt');
     var executaInserare = document.getElementById('executaInserare');
     var executaStergere = document.getElementById('executaStergere')
     var executaActualizare = document.getElementById('executaActualizare')
@@ -89,7 +90,7 @@ window.onload = function() {
             "VALUE_NAME": value_name.value,
             "TOTAL_VEHICULE": parseInt(t_vehicule.value)
         }
-        insertData(object, 'http://127.0.0.1:8125/api/2015').then((data) => {
+        insertData(object, 'http://127.0.0.1:8125/api/' + colectie.value).then((data) => {
             document.getElementById("raspunsInserare").innerHTML = JSON.stringify(data);
             console.log(data);
         })
@@ -97,7 +98,7 @@ window.onload = function() {
     executaStergere.onclick = function() {
         var id = document.getElementById('id_stergere');
         console.log(id.value);
-        deleteData(id.value, 'http://127.0.0.1:8125/api/2015').then((data) => {
+        deleteData(id.value, 'http://127.0.0.1:8125/api/' + colectie.value).then((data) => {
             console.log(data);
             document.getElementById("raspunsStergere").innerHTML = JSON.stringify(data);
         })
@@ -121,7 +122,7 @@ window.onload = function() {
             "TOTAL_VEHICULE": parseInt(t_vehicule.value)
         }
         console.log(object);
-        updateData(object, 'http://127.0.0.1:8125/api/2015', id.value).then((data) => {
+        updateData(object, 'http://127.0.0.1:8125/api/' + colectie.value, id.value).then((data) => {
             console.log(data);
             document.getElementById("raspunsActualizare").innerHTML = JSON.stringify(data);
         })

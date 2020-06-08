@@ -314,6 +314,10 @@ svg {
     flex-flow: column;
 }
 
+.administrareDiv {
+ height: 100vh;
+}
+
 #raspunsStergere,
 #raspunsInserare,
 #raspunsActualizare {

@@ -31,10 +31,18 @@
         </div>
     </header>
     <div id="main">
-        <div id="vizualizare">
+        <div id="vizualizare" class="administrareDiv">
             <div id="opt_section">
                 Bun venit! Poti face urmatoarele operatii:
-                <label for="format">Judet:</label>
+                <label for="format">Colectie an:</label>
+                <select name="colectie_an" id="colectie_an_opt">
+                 <option value="2015">2015</option>
+                 <option value="2016">2016</option>
+                 <option value="2017">2017</option>
+                 <option value="2018">2018</option>
+                 <option value="2019">2019</option>
+               </select>
+                <label for="format">Operatie:</label>
                 <select name="operatie" id="operatie_opt">
                  <option value="stergereDate">Stergere</option>
                  <option value="inserareDate">Inserare</option>

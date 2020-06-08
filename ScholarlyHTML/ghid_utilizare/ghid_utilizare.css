@@ -1,0 +1,83 @@
+body {
+    font-family: 'Roboto';
+    position: relative;
+    display: block;
+    left: 20%;
+    width: 50%;
+}
+
+p {
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin: 20px;
+    font-style: bold    ;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin: 20px;
+    border-bottom: black solid 1px;
+    width: 275px;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin: 10px;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin: 10px;
+    font-style: normal;
+}
+
+.footer_header {
+    padding: 5px;
+    font-size: 17px;
+    border-bottom: white solid 1px;
+    width: 325px;
+    color: black;
+    letter-spacing: 3px;
+}
+
+li {
+    color: black;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+ol > li {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-style: bold;
+}
+
+a {
+    color: black;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+dt {
+    margin: 20px;
+    letter-spacing: 3px;
+    font-size: 28px;
+}
+
+dd {
+    margin: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+}

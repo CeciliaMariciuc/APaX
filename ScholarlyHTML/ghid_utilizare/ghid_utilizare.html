@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentatie</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="ghid_utilizare.css">
+</head>
+
+<header>
+    <h1>Ghid de utilizare - APaX</h1>
+    <div role="contentinfo">
+      <dt>Cuprins</dt>
+      <ol role="directory">
+          <li> <a href="#acasa">Pagina Acasa</a></li>
+          <li> <a href="#statistici">Pagina Statistici</a></li>
+          <li> <a href="#harta">Pagina Harta</a></li>
+          <li> <a href="#vizualizare">Pagina Vizualizare</a></li>
+          <li> <a href="#despre">Pagina Despre</a></li>
+          <li> <a href="#ajutor">Pagina Ajutor</a></li>
+          <li> <a href="#administrare">Pagina Administrare</a></li>
+       </ol>
+       <dt> Autori </dt>
+       <dd> Mariciuc Ovidiu </dd>
+       <dd> Mariciuc Cecilia </dd>
+    </div>
+</header>
+<body>
+  <section id="acasa">
+  <h3>
+    Pagina "Acasa"
+  </h3>
+  <p>
+    <li>Pe pagina "Acasa", utilizatorul va descoperi in header, toate functionalitatile site-ului adica cele 5 butoane din meniul 
+    principal cu care poate 
+    interactiona: statistici, harta, vizualizare, despre si ajutor. In cazul in care acesta va apasa pe unul dintre cele 5 butoane
+    va fi redirectionat pe pagina corespunzatoare butonului apasat, iar pentru a revenit la pagina initiala "Acasa" trebuie sa apase
+    pe butonul "Auto Park Web Explorer". </li>
+    <li>Ca si continut sunt prezente 3 carduri cu rol informational si introductiv, fiecare continand o scurta descriere pentru
+    cele 3 pagini principale ale site-ului: Statistici Parc Auto, Harta si Vizualizare date Parc Auto. </li>
+    <li>In partea de jos a site-ului, adica in footer se vor regasi titlul si autorii proiectului, cateva link-uri 
+    rapide: unul catre codul sursa al proiectului, iar celalalt reprezentand o redirectionare catre pagina "Ajutor"  
+    si cateva date de contact, numerele de telefon al fiecarui membru din echipa si un email comun. </li>
+  </p>
+  </section>
+  <section id="statistici">
+  <h3>
+    Pagina "Statistici"
+  </h3>
+  <p>
+    Pe pagina "Statistici", utilizatorul va putea accesa diferite statistici despre distribuirea parcului auto din Romania din 
+    ultimii 5 ani, in functie de urmatoarele criterii: an, judet si categorie. De asemenea, acesta mai poate accesa statistici 
+    despre procentele de utilizare ale combustibililor in functie de anul si judetul selectat. Pentru fiecare filtru utilizatorul 
+    poate sa aleaga o optiune din listele propuse, pentru an acesta putand sa aleaga unul dintre anii 2015-2019, pentru judet 
+    putand selecta unul dintre cele 41 de judete din tara, iar la categorie avand ca posibilitatea de a alege una din lista 
+    urmatoare: M,N,O,T,L. </p>
+    <p>Dupa ce au fost aplicate toate filtrele utilizatorul poate accesa diagrama rezultata prin apasarea 
+    butonului "Genereaza". In cazul in care nu se va selecta nimic, diagrama va fi generata dupa optiunile implicite, anul 2015, 
+    toate judetele, categoria M. 
+    Pentru celalalt tip de statistici descoperim un nou filtru, faptul ca se poate alege tipul de diagrama care va fi 
+    generat(PieChart/BarChart, cel default fiind PieChart). Diagramele rezultate in urma filtrarii pot fi exportate in unul 
+    din cele 3 formate disponibile(SVG,CSV,WebP) prin apasarea butonului "Exporta".
+  </p>
+  </section>
+  <section id="harta">
+  <h3>
+    Pagina "Harta"
+  </h3>
+  <p>
+    Pe pagina "Harta", utilizatorul va descoperi o harta interactiva, cu ajutorul careia poate accesa numarul total de masini 
+    care au fost inmatriculate in fiecare judet din Romania in ultimii 5 ani( 2015-2019 ). Vizualizarea acestor informatii se 
+    poate face prin apasarea cu ajutorul mouse-ului pe un marker pe resedinta judetului dorit. Dupa executarea acestei actiuni
+    va fi afisat un chenar deasupra marker-ului selectat care va contine informatiile mentionate mai sus. In cazul in care acesta
+    doreste sa compare datele generate pentru 2 sau mai multe judete o poate face prin deschiderea simultana a chenarelelor
+    corespunzatoare fiecarui judet, iar inchiderea lor se poate face prin apasarea butonului "x" din coltul dreapta-sus al chenarului.
+  </p>
+  </section>
+  <section id="vizualizare">
+  <h3>
+    Pagina "Vizualizare"
+  </h3>
+  <p>
+    Pe pagina "Vizualizare", utilizatorul va putea accesa o serie de liste de vehicule in functie de preferintele selectate
+    (an, judet, categorie nationala, marca). Ca si pe pagina Statistici utilizatorul poate sa aleaga o optiune din listele 
+    propuse, exceptand filtrul Marca, unde trebuie sa introduca la tastatura valoarea dorita. Dupa apasarea butonului "Genereaza" va fi 
+    generata o lista care va avea ca si campuri informatiile deja selectate in procesul de filtrare, dar si altele in plus 
+    precum: categorie_comunitara, descriere_comerciala, tipul de combustibil si numarul total de vehicule de acest gen. </p>
+    <p>In cazul in care lista generata este prea lunga, utilizatorul o poate accesa pe toata folosindu-se de scrollbar-ul disponibil 
+    in partea dreapta. La fel ca si pe pagina "Statistici" listele rezultate in urma filtrarii pot fi exportate in unul din 
+    cele 3 formate disponibile(SVG,CSV,WebP) prin apasarea butonului "Exporta". In cazul in care nu se va selecta nimic, lista
+    va fi generata dupa optiunile implicite, anul 2015, toate judetele, autotractor si campul marca necompletat.
+  </p>
+  </section>
+  <section id="despre">
+  <h3>
+    Pagina "Despre"
+  </h3>
+  <p>
+    Pe pagina "Despre",utilizatorul va putea vizualiza diferite informatii despre tematica proiectului, membrii echipei,
+    documentatie, s.a. care sunt prezentate sub forma unor card-uri.
+      <li>Pe primul card este prezenta tema principala a proiectului.</li>
+      <li>Pe cel de-al doilea card sunt listate mai multe link-uri care alcatuiesc documentatia acestui proiect.</li>
+      <li>Cardul 3 ofera posibilitatea utilizatorului de a trece in modul administrativ al site-ului, acesta find nevoit sa 
+      introduca parola cunoscuta doar de catre administratori, in cazul in care parola introdusa este cea corecta, utilizatorul
+      va beneficia de toate caracteristicile suplimentare specifice unui administrator.</li>
+      <li>Card-urile 4 si 6 prezinta numele celor 2 membri ai echipei care au realizat acest proiect.</li>
+      <li>Cardul cu numarul 5 reprezinta modalitatea de comunicare dintre utilizator si administrator in cazul in care acesta 
+        are o problema, nelamurire, sugestie, etc. . Pentru a se realiza aceasta comunicare utilizatorul trebuie sa 
+        completeze toata campurile disponibile in sectiunea "Contacteaza-ne" (nume/email/subiect/mesaj).</li>
+  </p>
+  </section>
+  <section id="ajutor">
+  <h3>
+    Pagina "Ajutor"
+  </h3>
+  <p>
+    Pe pagina "Ajutor", utilizatorul va descoperie o serie de intrebari cu rol informativ, menite sa il ajute pe acesta 
+    in cazul in care nu stie sa gaseasca anumite date despre parcul auto din Romania, doreste sa trimita un mesaj 
+    administratorilor , ar vrea sa stie de unde au fost preluate datele folosite in diagramele si listele generate, etc.
+  </p>
+  <p>
+    Intrebarile apar sub forma unei liste, pentru a vedea raspunsul unei intrebari utilizatorul trebuie sa apese folosind 
+    mouse-ul pe sageata neagra de la sfarsitul acesteia, dupa apasare raspunsul va fi imediat afisat alaturi de intrebarea 
+    selectata. In cazul in care utilizatorul nu mai doreste sa vada raspunsul il poate ascunde folosindu-se de acceeasi actiune 
+    pe care a utilizat-o la momentul afisarii raspunsului.
+  </p>
+  </section>
+  <section id="administrare">
+  <h3>
+    Pagina "Administrare"
+  </h3>
+  <p>
+    Pagina de administrare poate fi accesata dupa ce fost introdusa parola corecta in formularul de pe pagina "Despre".
+    Aceasta pagina ofera 3 tipuri de operatii: Stergere, Inserare, Actualizare. In functie de optiunea aleasa, vor fi afisate 
+    campurile care trebuie completate pentru a se realiza operatia respectiva, iar prin apasarea butonului 'Executa operatia' 
+    se va face executia ceruta si se va primi un raspuns.
+  </p>
+  </section>
+</body>
