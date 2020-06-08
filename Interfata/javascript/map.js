@@ -19,7 +19,7 @@ function initMap() {
         lat: 46.6407,
         lng: 27.7276
     };
-    
+
 
     var markerVS = new google.maps.Marker({
         position: vaslui,
@@ -34,8 +34,6 @@ function initMap() {
 
     fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=vaslui", 'http://127.0.0.1:8125/api/2016/sum?judet=vaslui', 'http://127.0.0.1:8125/api/2017/sum?judet=vaslui', 'http://127.0.0.1:8125/api/2018/sum?judet=vaslui', 'http://127.0.0.1:8125/api/2019/sum?judet=vaslui')
         .then((data) => {
-            console.log(JSON.stringify(data));
-
 
             var contentStringVS =
                 '<div class ="infoWindow">' +
@@ -58,27 +56,27 @@ function initMap() {
 
         })
 
-        //Judetul Iasi
+    //Judetul Iasi
 
-        var iasi = {
-            lat: 47.151726,
-            lng: 27.587914
-        };
+    var iasi = {
+        lat: 47.151726,
+        lng: 27.587914
+    };
 
-        var markerIS = new google.maps.Marker({
-            position: iasi,
-            map: map,
-            title: 'Iasi',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerIS = new google.maps.Marker({
+        position: iasi,
+        map: map,
+        title: 'Iasi',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=iasi", 'http://127.0.0.1:8125/api/2016/sum?judet=iasi', 'http://127.0.0.1:8125/api/2017/sum?judet=iasi', 'http://127.0.0.1:8125/api/2018/sum?judet=iasi', 'http://127.0.0.1:8125/api/2019/sum?judet=iasi')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=iasi", 'http://127.0.0.1:8125/api/2016/sum?judet=iasi', 'http://127.0.0.1:8125/api/2017/sum?judet=iasi', 'http://127.0.0.1:8125/api/2018/sum?judet=iasi', 'http://127.0.0.1:8125/api/2019/sum?judet=iasi')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringIS =
@@ -102,27 +100,27 @@ function initMap() {
 
         })
 
-        //Judetul Botosani
+    //Judetul Botosani
 
-        var botosani = {
-            lat: 47.75,
-            lng: 26.6666698
-        };
+    var botosani = {
+        lat: 47.75,
+        lng: 26.6666698
+    };
 
-        var markerBT = new google.maps.Marker({
-            position: botosani,
-            map: map,
-            title: 'Botosani',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBT = new google.maps.Marker({
+        position: botosani,
+        map: map,
+        title: 'Botosani',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=botosani", 'http://127.0.0.1:8125/api/2016/sum?judet=botosani', 'http://127.0.0.1:8125/api/2017/sum?judet=botosani', 'http://127.0.0.1:8125/api/2018/sum?judet=botosani', 'http://127.0.0.1:8125/api/2019/sum?judet=botosani')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=botosani", 'http://127.0.0.1:8125/api/2016/sum?judet=botosani', 'http://127.0.0.1:8125/api/2017/sum?judet=botosani', 'http://127.0.0.1:8125/api/2018/sum?judet=botosani', 'http://127.0.0.1:8125/api/2019/sum?judet=botosani')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringBT =
@@ -146,27 +144,27 @@ function initMap() {
 
         })
 
-        //Judetul Suceava
+    //Judetul Suceava
 
-        var suceava = {
-            lat: 47.6333313,
-            lng: 26.25
-        };
+    var suceava = {
+        lat: 47.6333313,
+        lng: 26.25
+    };
 
-        var markerSV = new google.maps.Marker({
-            position: suceava,
-            map: map,
-            title: 'Suceava',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerSV = new google.maps.Marker({
+        position: suceava,
+        map: map,
+        title: 'Suceava',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=suceava", 'http://127.0.0.1:8125/api/2016/sum?judet=suceava', 'http://127.0.0.1:8125/api/2017/sum?judet=suceava', 'http://127.0.0.1:8125/api/2018/sum?judet=suceava', 'http://127.0.0.1:8125/api/2019/sum?judet=suceava')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=suceava", 'http://127.0.0.1:8125/api/2016/sum?judet=suceava', 'http://127.0.0.1:8125/api/2017/sum?judet=suceava', 'http://127.0.0.1:8125/api/2018/sum?judet=suceava', 'http://127.0.0.1:8125/api/2019/sum?judet=suceava')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringSV =
@@ -190,27 +188,27 @@ function initMap() {
 
         })
 
-        //Judetul Bacau
+    //Judetul Bacau
 
-        var bacau = {
-            lat: 46.5671806,
-            lng: 26.9138393
-        };
+    var bacau = {
+        lat: 46.5671806,
+        lng: 26.9138393
+    };
 
-        var markerBC = new google.maps.Marker({
-            position: bacau,
-            map: map,
-            title: 'Bacau',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBC = new google.maps.Marker({
+        position: bacau,
+        map: map,
+        title: 'Bacau',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bacau", 'http://127.0.0.1:8125/api/2016/sum?judet=bacau', 'http://127.0.0.1:8125/api/2017/sum?judet=bacau', 'http://127.0.0.1:8125/api/2018/sum?judet=bacau', 'http://127.0.0.1:8125/api/2019/sum?judet=bacau')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bacau", 'http://127.0.0.1:8125/api/2016/sum?judet=bacau', 'http://127.0.0.1:8125/api/2017/sum?judet=bacau', 'http://127.0.0.1:8125/api/2018/sum?judet=bacau', 'http://127.0.0.1:8125/api/2019/sum?judet=bacau')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringBC =
@@ -234,27 +232,27 @@ function initMap() {
 
         })
 
-        //Judetul Bacau
+    //Judetul Bacau
 
-        var galati = {
-            lat: 45.4500008,
-            lng: 28.0499992
-        };
+    var galati = {
+        lat: 45.4500008,
+        lng: 28.0499992
+    };
 
-        var markerGL = new google.maps.Marker({
-            position: galati,
-            map: map,
-            title: 'Galati',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerGL = new google.maps.Marker({
+        position: galati,
+        map: map,
+        title: 'Galati',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=galati", 'http://127.0.0.1:8125/api/2016/sum?judet=galati', 'http://127.0.0.1:8125/api/2017/sum?judet=galati', 'http://127.0.0.1:8125/api/2018/sum?judet=galati', 'http://127.0.0.1:8125/api/2019/sum?judet=galati')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=galati", 'http://127.0.0.1:8125/api/2016/sum?judet=galati', 'http://127.0.0.1:8125/api/2017/sum?judet=galati', 'http://127.0.0.1:8125/api/2018/sum?judet=galati', 'http://127.0.0.1:8125/api/2019/sum?judet=galati')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringGL =
@@ -278,27 +276,27 @@ function initMap() {
 
         })
 
-        //Judetul Constanta
+    //Judetul Constanta
 
-        var constanta = {
-            lat: 44.1807289,
-            lng: 28.6343193
-        };
+    var constanta = {
+        lat: 44.1807289,
+        lng: 28.6343193
+    };
 
-        var markerCT = new google.maps.Marker({
-            position: constanta,
-            map: map,
-            title: 'Constanta',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerCT = new google.maps.Marker({
+        position: constanta,
+        map: map,
+        title: 'Constanta',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=constanta", 'http://127.0.0.1:8125/api/2016/sum?judet=constanta', 'http://127.0.0.1:8125/api/2017/sum?judet=constanta', 'http://127.0.0.1:8125/api/2018/sum?judet=constanta', 'http://127.0.0.1:8125/api/2019/sum?judet=constanta')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=constanta", 'http://127.0.0.1:8125/api/2016/sum?judet=constanta', 'http://127.0.0.1:8125/api/2017/sum?judet=constanta', 'http://127.0.0.1:8125/api/2018/sum?judet=constanta', 'http://127.0.0.1:8125/api/2019/sum?judet=constanta')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringCT =
@@ -322,27 +320,27 @@ function initMap() {
 
         })
 
-        //Judetul Brasov
+    //Judetul Brasov
 
-        var brasov = {
-            lat: 45.6486092,
-            lng: 25.6061306
-        };
+    var brasov = {
+        lat: 45.6486092,
+        lng: 25.6061306
+    };
 
-        var markerBV = new google.maps.Marker({
-            position: brasov,
-            map: map,
-            title: 'Brasov',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBV = new google.maps.Marker({
+        position: brasov,
+        map: map,
+        title: 'Brasov',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=brasov", 'http://127.0.0.1:8125/api/2016/sum?judet=brasov', 'http://127.0.0.1:8125/api/2017/sum?judet=brasov', 'http://127.0.0.1:8125/api/2018/sum?judet=brasov', 'http://127.0.0.1:8125/api/2019/sum?judet=brasov')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=brasov", 'http://127.0.0.1:8125/api/2016/sum?judet=brasov', 'http://127.0.0.1:8125/api/2017/sum?judet=brasov', 'http://127.0.0.1:8125/api/2018/sum?judet=brasov', 'http://127.0.0.1:8125/api/2019/sum?judet=brasov')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringBV =
@@ -366,27 +364,27 @@ function initMap() {
 
         })
 
-        //Judetul Dolj
+    //Judetul Dolj
 
-        var craiova = {
-            lat: 44.3166695,
-            lng: 23.7999992
-        };
+    var craiova = {
+        lat: 44.3166695,
+        lng: 23.7999992
+    };
 
-        var markerDJ = new google.maps.Marker({
-            position: craiova,
-            map: map,
-            title: 'Craiova',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerDJ = new google.maps.Marker({
+        position: craiova,
+        map: map,
+        title: 'Craiova',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=dolj", 'http://127.0.0.1:8125/api/2016/sum?judet=dolj', 'http://127.0.0.1:8125/api/2017/sum?judet=dolj', 'http://127.0.0.1:8125/api/2018/sum?judet=dolj', 'http://127.0.0.1:8125/api/2019/sum?judet=dolj')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=dolj", 'http://127.0.0.1:8125/api/2016/sum?judet=dolj', 'http://127.0.0.1:8125/api/2017/sum?judet=dolj', 'http://127.0.0.1:8125/api/2018/sum?judet=dolj', 'http://127.0.0.1:8125/api/2019/sum?judet=dolj')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringDJ =
@@ -410,27 +408,27 @@ function initMap() {
 
         })
 
-        //Judetul Arad
+    //Judetul Arad
 
-        var arad = {
-            lat: 46.1833305,
-            lng: 21.3166695
-        };
+    var arad = {
+        lat: 46.1833305,
+        lng: 21.3166695
+    };
 
-        var markerAR = new google.maps.Marker({
-            position: arad,
-            map: map,
-            title: 'Arad',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerAR = new google.maps.Marker({
+        position: arad,
+        map: map,
+        title: 'Arad',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=arad", 'http://127.0.0.1:8125/api/2016/sum?judet=arad', 'http://127.0.0.1:8125/api/2017/sum?judet=arad', 'http://127.0.0.1:8125/api/2018/sum?judet=arad', 'http://127.0.0.1:8125/api/2019/sum?judet=arad')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=arad", 'http://127.0.0.1:8125/api/2016/sum?judet=arad', 'http://127.0.0.1:8125/api/2017/sum?judet=arad', 'http://127.0.0.1:8125/api/2018/sum?judet=arad', 'http://127.0.0.1:8125/api/2019/sum?judet=arad')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringAR =
@@ -454,27 +452,27 @@ function initMap() {
 
         })
 
-         //Judetul Sibiu
+    //Judetul Sibiu
 
-         var sibiu = {
-            lat: 45.7999992,
-            lng: 24.1499996
-        };
+    var sibiu = {
+        lat: 45.7999992,
+        lng: 24.1499996
+    };
 
-        var markerSB = new google.maps.Marker({
-            position: sibiu,
-            map: map,
-            title: 'Sibiu',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerSB = new google.maps.Marker({
+        position: sibiu,
+        map: map,
+        title: 'Sibiu',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=sibiu", 'http://127.0.0.1:8125/api/2016/sum?judet=sibiu', 'http://127.0.0.1:8125/api/2017/sum?judet=sibiu', 'http://127.0.0.1:8125/api/2018/sum?judet=sibiu', 'http://127.0.0.1:8125/api/2019/sum?judet=sibiu')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=sibiu", 'http://127.0.0.1:8125/api/2016/sum?judet=sibiu', 'http://127.0.0.1:8125/api/2017/sum?judet=sibiu', 'http://127.0.0.1:8125/api/2018/sum?judet=sibiu', 'http://127.0.0.1:8125/api/2019/sum?judet=sibiu')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringSB =
@@ -498,27 +496,27 @@ function initMap() {
 
         })
 
-        //Judetul Bihor
+    //Judetul Bihor
 
-        var oradea = {
-            lat: 47.0457993,
-            lng: 21.9183292
-        };
+    var oradea = {
+        lat: 47.0457993,
+        lng: 21.9183292
+    };
 
-        var markerBH = new google.maps.Marker({
-            position: oradea,
-            map: map,
-            title: 'Bihor',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBH = new google.maps.Marker({
+        position: oradea,
+        map: map,
+        title: 'Bihor',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bihor", 'http://127.0.0.1:8125/api/2016/sum?judet=bihor', 'http://127.0.0.1:8125/api/2017/sum?judet=bihor', 'http://127.0.0.1:8125/api/2018/sum?judet=bihor', 'http://127.0.0.1:8125/api/2019/sum?judet=bihor')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bihor", 'http://127.0.0.1:8125/api/2016/sum?judet=bihor', 'http://127.0.0.1:8125/api/2017/sum?judet=bihor', 'http://127.0.0.1:8125/api/2018/sum?judet=bihor', 'http://127.0.0.1:8125/api/2019/sum?judet=bihor')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringBH =
@@ -542,27 +540,27 @@ function initMap() {
 
         })
 
-        //Judetul Arges
+    //Judetul Arges
 
-        var pitesti = {
-            lat: 44.8499985,
-            lng: 24.8666706
-        };
+    var pitesti = {
+        lat: 44.8499985,
+        lng: 24.8666706
+    };
 
-        var markerBH = new google.maps.Marker({
-            position: pitesti,
-            map: map,
-            title: 'Arges',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBH = new google.maps.Marker({
+        position: pitesti,
+        map: map,
+        title: 'Arges',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=arges", 'http://127.0.0.1:8125/api/2016/sum?judet=arges', 'http://127.0.0.1:8125/api/2017/sum?judet=arges', 'http://127.0.0.1:8125/api/2018/sum?judet=arges', 'http://127.0.0.1:8125/api/2019/sum?judet=arges')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=arges", 'http://127.0.0.1:8125/api/2016/sum?judet=arges', 'http://127.0.0.1:8125/api/2017/sum?judet=arges', 'http://127.0.0.1:8125/api/2018/sum?judet=arges', 'http://127.0.0.1:8125/api/2019/sum?judet=arges')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringAG =
@@ -586,27 +584,27 @@ function initMap() {
 
         })
 
-         //Judetul Braila
+    //Judetul Braila
 
-         var braila = {
-            lat: 45.2666702,
-            lng: 27.9833298
-        };
+    var braila = {
+        lat: 45.2666702,
+        lng: 27.9833298
+    };
 
-        var markerBR = new google.maps.Marker({
-            position: braila,
-            map: map,
-            title: 'Braila',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBR = new google.maps.Marker({
+        position: braila,
+        map: map,
+        title: 'Braila',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=braila", 'http://127.0.0.1:8125/api/2016/sum?judet=braila', 'http://127.0.0.1:8125/api/2017/sum?judet=braila', 'http://127.0.0.1:8125/api/2018/sum?judet=braila', 'http://127.0.0.1:8125/api/2019/sum?judet=braila')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=braila", 'http://127.0.0.1:8125/api/2016/sum?judet=braila', 'http://127.0.0.1:8125/api/2017/sum?judet=braila', 'http://127.0.0.1:8125/api/2018/sum?judet=braila', 'http://127.0.0.1:8125/api/2019/sum?judet=braila')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringBR =
@@ -630,27 +628,27 @@ function initMap() {
 
         })
 
-         //Judetul Cluj
+    //Judetul Cluj
 
-         var cluj = {
-            lat: 46.7666702,
-            lng: 23.6000004
-        };
+    var cluj = {
+        lat: 46.7666702,
+        lng: 23.6000004
+    };
 
-        var markerCJ = new google.maps.Marker({
-            position: cluj,
-            map: map,
-            title: 'Cluj',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerCJ = new google.maps.Marker({
+        position: cluj,
+        map: map,
+        title: 'Cluj',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=cluj", 'http://127.0.0.1:8125/api/2016/sum?judet=cluj', 'http://127.0.0.1:8125/api/2017/sum?judet=cluj', 'http://127.0.0.1:8125/api/2018/sum?judet=cluj', 'http://127.0.0.1:8125/api/2019/sum?judet=cluj')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=cluj", 'http://127.0.0.1:8125/api/2016/sum?judet=cluj', 'http://127.0.0.1:8125/api/2017/sum?judet=cluj', 'http://127.0.0.1:8125/api/2018/sum?judet=cluj', 'http://127.0.0.1:8125/api/2019/sum?judet=cluj')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringCJ =
@@ -674,27 +672,27 @@ function initMap() {
 
         })
 
-        //Capitala Bucuresti
+    //Capitala Bucuresti
 
-        var bucuresti = {
-            lat: 44.432251,
-            lng: 26.1062603
-        };
+    var bucuresti = {
+        lat: 44.432251,
+        lng: 26.1062603
+    };
 
-        var markerB = new google.maps.Marker({
-            position: bucuresti,
-            map: map,
-            title: 'Bucuresti',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerB = new google.maps.Marker({
+        position: bucuresti,
+        map: map,
+        title: 'Bucuresti',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bucuresti", 'http://127.0.0.1:8125/api/2016/sum?judet=bucuresti', 'http://127.0.0.1:8125/api/2017/sum?judet=bucuresti', 'http://127.0.0.1:8125/api/2018/sum?judet=bucuresti', 'http://127.0.0.1:8125/api/2019/sum?judet=bucuresti')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bucuresti", 'http://127.0.0.1:8125/api/2016/sum?judet=bucuresti', 'http://127.0.0.1:8125/api/2017/sum?judet=bucuresti', 'http://127.0.0.1:8125/api/2018/sum?judet=bucuresti', 'http://127.0.0.1:8125/api/2019/sum?judet=bucuresti')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringB =
@@ -718,27 +716,27 @@ function initMap() {
 
         })
 
-        //Judetul Hunedoara
+    //Judetul Hunedoara
 
-        var deva = {
-            lat: 45.8833313,
-            lng: 22.8999996
-        };
+    var deva = {
+        lat: 45.8833313,
+        lng: 22.8999996
+    };
 
-        var markerHD = new google.maps.Marker({
-            position: deva,
-            map: map,
-            title: 'Hunedoara',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerHD = new google.maps.Marker({
+        position: deva,
+        map: map,
+        title: 'Hunedoara',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=hunedoara", 'http://127.0.0.1:8125/api/2016/sum?judet=hunedoara', 'http://127.0.0.1:8125/api/2017/sum?judet=hunedoara', 'http://127.0.0.1:8125/api/2018/sum?judet=hunedoara', 'http://127.0.0.1:8125/api/2019/sum?judet=hunedoara')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=hunedoara", 'http://127.0.0.1:8125/api/2016/sum?judet=hunedoara', 'http://127.0.0.1:8125/api/2017/sum?judet=hunedoara', 'http://127.0.0.1:8125/api/2018/sum?judet=hunedoara', 'http://127.0.0.1:8125/api/2019/sum?judet=hunedoara')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringHD =
@@ -762,27 +760,27 @@ function initMap() {
 
         })
 
-        //Judetul Gorj
+    //Judetul Gorj
 
-        var gorj = {
-            lat: 45.0499992,
-            lng: 23.2833309
-        };
+    var gorj = {
+        lat: 45.0499992,
+        lng: 23.2833309
+    };
 
-        var markerGJ = new google.maps.Marker({
-            position: gorj,
-            map: map,
-            title: 'Gorj',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerGJ = new google.maps.Marker({
+        position: gorj,
+        map: map,
+        title: 'Gorj',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=gorj", 'http://127.0.0.1:8125/api/2016/sum?judet=gorj', 'http://127.0.0.1:8125/api/2017/sum?judet=gorj', 'http://127.0.0.1:8125/api/2018/sum?judet=gorj', 'http://127.0.0.1:8125/api/2019/sum?judet=gorj')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=gorj", 'http://127.0.0.1:8125/api/2016/sum?judet=gorj', 'http://127.0.0.1:8125/api/2017/sum?judet=gorj', 'http://127.0.0.1:8125/api/2018/sum?judet=gorj', 'http://127.0.0.1:8125/api/2019/sum?judet=gorj')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringGJ =
@@ -806,27 +804,27 @@ function initMap() {
 
         })
 
-        //Judetul Mures
+    //Judetul Mures
 
-        var mures = {
-            lat: 46.54245,
-            lng: 24.5574703
-        };
+    var mures = {
+        lat: 46.54245,
+        lng: 24.5574703
+    };
 
-        var markerMS = new google.maps.Marker({
-            position: mures,
-            map: map,
-            title: 'Mures',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerMS = new google.maps.Marker({
+        position: mures,
+        map: map,
+        title: 'Mures',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=mures", 'http://127.0.0.1:8125/api/2016/sum?judet=mures', 'http://127.0.0.1:8125/api/2017/sum?judet=mures', 'http://127.0.0.1:8125/api/2018/sum?judet=mures', 'http://127.0.0.1:8125/api/2019/sum?judet=mures')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=mures", 'http://127.0.0.1:8125/api/2016/sum?judet=mures', 'http://127.0.0.1:8125/api/2017/sum?judet=mures', 'http://127.0.0.1:8125/api/2018/sum?judet=mures', 'http://127.0.0.1:8125/api/2019/sum?judet=mures')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringMS =
@@ -850,27 +848,27 @@ function initMap() {
 
         })
 
-         //Judetul Bistrita-Nasaud
+    //Judetul Bistrita-Nasaud
 
-         var bistrita = {
-            lat: 47.1331596,
-            lng: 24.5001106
-        };
+    var bistrita = {
+        lat: 47.1331596,
+        lng: 24.5001106
+    };
 
-        var markerBN = new google.maps.Marker({
-            position: bistrita,
-            map: map,
-            title: 'Bistrita-Nasaud',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBN = new google.maps.Marker({
+        position: bistrita,
+        map: map,
+        title: 'Bistrita-Nasaud',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bistrita-nasaud", 'http://127.0.0.1:8125/api/2016/sum?judet=bistrita-nasaud', 'http://127.0.0.1:8125/api/2017/sum?judet=bistrita-nasaud', 'http://127.0.0.1:8125/api/2018/sum?judet=bistrita-nasaud', 'http://127.0.0.1:8125/api/2019/sum?judet=bistrita-nasaud')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=bistrita-nasaud", 'http://127.0.0.1:8125/api/2016/sum?judet=bistrita-nasaud', 'http://127.0.0.1:8125/api/2017/sum?judet=bistrita-nasaud', 'http://127.0.0.1:8125/api/2018/sum?judet=bistrita-nasaud', 'http://127.0.0.1:8125/api/2019/sum?judet=bistrita-nasaud')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringBN =
@@ -894,27 +892,27 @@ function initMap() {
 
         })
 
-        //Judetul Vrancea
+    //Judetul Vrancea
 
-        var vrancea = {
-            lat: 45.7000008,
-            lng: 27.1833305
-        };
+    var vrancea = {
+        lat: 45.7000008,
+        lng: 27.1833305
+    };
 
-        var markerVN = new google.maps.Marker({
-            position: vrancea,
-            map: map,
-            title: 'Vrancea',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerVN = new google.maps.Marker({
+        position: vrancea,
+        map: map,
+        title: 'Vrancea',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=vrancea", 'http://127.0.0.1:8125/api/2016/sum?judet=vrancea', 'http://127.0.0.1:8125/api/2017/sum?judet=vrancea', 'http://127.0.0.1:8125/api/2018/sum?judet=vrancea', 'http://127.0.0.1:8125/api/2019/sum?judet=vrancea')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=vrancea", 'http://127.0.0.1:8125/api/2016/sum?judet=vrancea', 'http://127.0.0.1:8125/api/2017/sum?judet=vrancea', 'http://127.0.0.1:8125/api/2018/sum?judet=vrancea', 'http://127.0.0.1:8125/api/2019/sum?judet=vrancea')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringVN =
@@ -938,27 +936,27 @@ function initMap() {
 
         })
 
-        //Judetul Maramures
+    //Judetul Maramures
 
-        var maramures = {
-            lat: 47.9319496,
-            lng: 23.8860302
-        };
+    var maramures = {
+        lat: 47.9319496,
+        lng: 23.8860302
+    };
 
-        var markerMM = new google.maps.Marker({
-            position: maramures,
-            map: map,
-            title: 'Maramures',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerMM = new google.maps.Marker({
+        position: maramures,
+        map: map,
+        title: 'Maramures',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=maramures", 'http://127.0.0.1:8125/api/2016/sum?judet=maramures', 'http://127.0.0.1:8125/api/2017/sum?judet=maramures', 'http://127.0.0.1:8125/api/2018/sum?judet=maramures', 'http://127.0.0.1:8125/api/2019/sum?judet=maramures')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=maramures", 'http://127.0.0.1:8125/api/2016/sum?judet=maramures', 'http://127.0.0.1:8125/api/2017/sum?judet=maramures', 'http://127.0.0.1:8125/api/2018/sum?judet=maramures', 'http://127.0.0.1:8125/api/2019/sum?judet=maramures')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringMM =
@@ -982,27 +980,27 @@ function initMap() {
 
         })
 
-        //Judetul Caras-Severin
+    //Judetul Caras-Severin
 
-        var resita = {
-            lat: 45.3008308,
-            lng: 21.8891697
-        };
+    var resita = {
+        lat: 45.3008308,
+        lng: 21.8891697
+    };
 
-        var markerCS = new google.maps.Marker({
-            position: resita,
-            map: map,
-            title: 'Caras-Severin',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerCS = new google.maps.Marker({
+        position: resita,
+        map: map,
+        title: 'Caras-Severin',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=caras-severin", 'http://127.0.0.1:8125/api/2016/sum?judet=caras-severin', 'http://127.0.0.1:8125/api/2017/sum?judet=caras-severin', 'http://127.0.0.1:8125/api/2018/sum?judet=caras-severin', 'http://127.0.0.1:8125/api/2019/sum?judet=caras-severin')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=caras-severin", 'http://127.0.0.1:8125/api/2016/sum?judet=caras-severin', 'http://127.0.0.1:8125/api/2017/sum?judet=caras-severin', 'http://127.0.0.1:8125/api/2018/sum?judet=caras-severin', 'http://127.0.0.1:8125/api/2019/sum?judet=caras-severin')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringCS =
@@ -1026,27 +1024,27 @@ function initMap() {
 
         })
 
-        //Judetul Olt
+    //Judetul Olt
 
-        var olt = {
-            lat: 44.4333305,
-            lng: 24.3666706
-        };
+    var olt = {
+        lat: 44.4333305,
+        lng: 24.3666706
+    };
 
-        var markerOT = new google.maps.Marker({
-            position: olt,
-            map: map,
-            title: 'Olt',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerOT = new google.maps.Marker({
+        position: olt,
+        map: map,
+        title: 'Olt',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=olt", 'http://127.0.0.1:8125/api/2016/sum?judet=olt', 'http://127.0.0.1:8125/api/2017/sum?judet=olt', 'http://127.0.0.1:8125/api/2018/sum?judet=olt', 'http://127.0.0.1:8125/api/2019/sum?judet=olt')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=olt", 'http://127.0.0.1:8125/api/2016/sum?judet=olt', 'http://127.0.0.1:8125/api/2017/sum?judet=olt', 'http://127.0.0.1:8125/api/2018/sum?judet=olt', 'http://127.0.0.1:8125/api/2019/sum?judet=olt')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringOT =
@@ -1070,27 +1068,27 @@ function initMap() {
 
         })
 
-        //Judetul Buzau
+    //Judetul Buzau
 
-        var buzau = {
-            lat: 45.1500015,
-            lng: 26.8333302
-        };
+    var buzau = {
+        lat: 45.1500015,
+        lng: 26.8333302
+    };
 
-        var markerBZ = new google.maps.Marker({
-            position: buzau,
-            map: map,
-            title: 'Buzau',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerBZ = new google.maps.Marker({
+        position: buzau,
+        map: map,
+        title: 'Buzau',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=buzau", 'http://127.0.0.1:8125/api/2016/sum?judet=buzau', 'http://127.0.0.1:8125/api/2017/sum?judet=buzau', 'http://127.0.0.1:8125/api/2018/sum?judet=buzau', 'http://127.0.0.1:8125/api/2019/sum?judet=buzau')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=buzau", 'http://127.0.0.1:8125/api/2016/sum?judet=buzau', 'http://127.0.0.1:8125/api/2017/sum?judet=buzau', 'http://127.0.0.1:8125/api/2018/sum?judet=buzau', 'http://127.0.0.1:8125/api/2019/sum?judet=buzau')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringBZ =
@@ -1114,27 +1112,27 @@ function initMap() {
 
         })
 
-        //Judetul Covasna
+    //Judetul Covasna
 
-        var covasna = {
-            lat: 45.8666687,
-            lng: 25.7833309
-        };
+    var covasna = {
+        lat: 45.8666687,
+        lng: 25.7833309
+    };
 
-        var markerCV = new google.maps.Marker({
-            position: covasna,
-            map: map,
-            title: 'Covasna',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerCV = new google.maps.Marker({
+        position: covasna,
+        map: map,
+        title: 'Covasna',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=covasna", 'http://127.0.0.1:8125/api/2016/sum?judet=covasna', 'http://127.0.0.1:8125/api/2017/sum?judet=covasna', 'http://127.0.0.1:8125/api/2018/sum?judet=covasna', 'http://127.0.0.1:8125/api/2019/sum?judet=covasna')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=covasna", 'http://127.0.0.1:8125/api/2016/sum?judet=covasna', 'http://127.0.0.1:8125/api/2017/sum?judet=covasna', 'http://127.0.0.1:8125/api/2018/sum?judet=covasna', 'http://127.0.0.1:8125/api/2019/sum?judet=covasna')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringCV =
@@ -1158,27 +1156,27 @@ function initMap() {
 
         })
 
-        //Judetul Neamt
+    //Judetul Neamt
 
-        var neamt = {
-            lat: 46.9166718,
-            lng: 26.3333302
-        };
+    var neamt = {
+        lat: 46.9166718,
+        lng: 26.3333302
+    };
 
-        var markerNT = new google.maps.Marker({
-            position: neamt,
-            map: map,
-            title: 'Neamt',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerNT = new google.maps.Marker({
+        position: neamt,
+        map: map,
+        title: 'Neamt',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=neamt", 'http://127.0.0.1:8125/api/2016/sum?judet=neamt', 'http://127.0.0.1:8125/api/2017/sum?judet=neamt', 'http://127.0.0.1:8125/api/2018/sum?judet=neamt', 'http://127.0.0.1:8125/api/2019/sum?judet=neamt')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=neamt", 'http://127.0.0.1:8125/api/2016/sum?judet=neamt', 'http://127.0.0.1:8125/api/2017/sum?judet=neamt', 'http://127.0.0.1:8125/api/2018/sum?judet=neamt', 'http://127.0.0.1:8125/api/2019/sum?judet=neamt')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringNT =
@@ -1202,27 +1200,27 @@ function initMap() {
 
         })
 
-        //Judetul Tulcea
+    //Judetul Tulcea
 
-        var tulcea = {
-            lat: 45.1666718,
-            lng: 28.7999992
-        };
+    var tulcea = {
+        lat: 45.1666718,
+        lng: 28.7999992
+    };
 
-        var markerTL = new google.maps.Marker({
-            position: tulcea,
-            map: map,
-            title: 'Tulcea',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerTL = new google.maps.Marker({
+        position: tulcea,
+        map: map,
+        title: 'Tulcea',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=tulcea", 'http://127.0.0.1:8125/api/2016/sum?judet=tulcea', 'http://127.0.0.1:8125/api/2017/sum?judet=tulcea', 'http://127.0.0.1:8125/api/2018/sum?judet=tulcea', 'http://127.0.0.1:8125/api/2019/sum?judet=tulcea')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=tulcea", 'http://127.0.0.1:8125/api/2016/sum?judet=tulcea', 'http://127.0.0.1:8125/api/2017/sum?judet=tulcea', 'http://127.0.0.1:8125/api/2018/sum?judet=tulcea', 'http://127.0.0.1:8125/api/2019/sum?judet=tulcea')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringTL =
@@ -1246,27 +1244,27 @@ function initMap() {
 
         })
 
-        //Judetul Alba
+    //Judetul Alba
 
-        var alba = {
-            lat: 46.0666695,
-            lng: 23.5833302
-        };
+    var alba = {
+        lat: 46.0666695,
+        lng: 23.5833302
+    };
 
-        var markerAB = new google.maps.Marker({
-            position: alba,
-            map: map,
-            title: 'Alba',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerAB = new google.maps.Marker({
+        position: alba,
+        map: map,
+        title: 'Alba',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=alba", 'http://127.0.0.1:8125/api/2016/sum?judet=alba', 'http://127.0.0.1:8125/api/2017/sum?judet=alba', 'http://127.0.0.1:8125/api/2018/sum?judet=alba', 'http://127.0.0.1:8125/api/2019/sum?judet=alba')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=alba", 'http://127.0.0.1:8125/api/2016/sum?judet=alba', 'http://127.0.0.1:8125/api/2017/sum?judet=alba', 'http://127.0.0.1:8125/api/2018/sum?judet=alba', 'http://127.0.0.1:8125/api/2019/sum?judet=alba')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringAB =
@@ -1290,27 +1288,27 @@ function initMap() {
 
         })
 
-        //Judetul Salaj
+    //Judetul Salaj
 
-        var salaj = {
-            lat: 47.2000008,
-            lng: 23.0499992
-        };
+    var salaj = {
+        lat: 47.2000008,
+        lng: 23.0499992
+    };
 
-        var markerSJ = new google.maps.Marker({
-            position: salaj,
-            map: map,
-            title: 'Salaj',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerSJ = new google.maps.Marker({
+        position: salaj,
+        map: map,
+        title: 'Salaj',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=salaj", 'http://127.0.0.1:8125/api/2016/sum?judet=salaj', 'http://127.0.0.1:8125/api/2017/sum?judet=salaj', 'http://127.0.0.1:8125/api/2018/sum?judet=salaj', 'http://127.0.0.1:8125/api/2019/sum?judet=salaj')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=salaj", 'http://127.0.0.1:8125/api/2016/sum?judet=salaj', 'http://127.0.0.1:8125/api/2017/sum?judet=salaj', 'http://127.0.0.1:8125/api/2018/sum?judet=salaj', 'http://127.0.0.1:8125/api/2019/sum?judet=salaj')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringSJ =
@@ -1334,27 +1332,27 @@ function initMap() {
 
         })
 
-        //Judetul Mehedinti
+    //Judetul Mehedinti
 
-        var mehedinti = {
-            lat: 44.6319389,
-            lng: 22.6561108
-        };
+    var mehedinti = {
+        lat: 44.6319389,
+        lng: 22.6561108
+    };
 
-        var markerMD = new google.maps.Marker({
-            position: mehedinti,
-            map: map,
-            title: 'Mehedinti',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerMD = new google.maps.Marker({
+        position: mehedinti,
+        map: map,
+        title: 'Mehedinti',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=mehedinti", 'http://127.0.0.1:8125/api/2016/sum?judet=mehedinti', 'http://127.0.0.1:8125/api/2017/sum?judet=mehedinti', 'http://127.0.0.1:8125/api/2018/sum?judet=mehedinti', 'http://127.0.0.1:8125/api/2019/sum?judet=mehedinti')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=mehedinti", 'http://127.0.0.1:8125/api/2016/sum?judet=mehedinti', 'http://127.0.0.1:8125/api/2017/sum?judet=mehedinti', 'http://127.0.0.1:8125/api/2018/sum?judet=mehedinti', 'http://127.0.0.1:8125/api/2019/sum?judet=mehedinti')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringMD =
@@ -1378,27 +1376,27 @@ function initMap() {
 
         })
 
-        //Judetul Timis
+    //Judetul Timis
 
-        var timis = {
-            lat: 45.7537193,
-            lng: 21.2257099
-        };
+    var timis = {
+        lat: 45.7537193,
+        lng: 21.2257099
+    };
 
-        var markerTM = new google.maps.Marker({
-            position: timis,
-            map: map,
-            title: 'Timis',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerTM = new google.maps.Marker({
+        position: timis,
+        map: map,
+        title: 'Timis',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=timis", 'http://127.0.0.1:8125/api/2016/sum?judet=timis', 'http://127.0.0.1:8125/api/2017/sum?judet=timis', 'http://127.0.0.1:8125/api/2018/sum?judet=timis', 'http://127.0.0.1:8125/api/2019/sum?judet=timis')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=timis", 'http://127.0.0.1:8125/api/2016/sum?judet=timis', 'http://127.0.0.1:8125/api/2017/sum?judet=timis', 'http://127.0.0.1:8125/api/2018/sum?judet=timis', 'http://127.0.0.1:8125/api/2019/sum?judet=timis')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringTM =
@@ -1422,27 +1420,27 @@ function initMap() {
 
         })
 
-        //Judetul Prahova
+    //Judetul Prahova
 
-        var prahova = {
-            lat: 44.9500008,
-            lng: 26.0166702
-        };
+    var prahova = {
+        lat: 44.9500008,
+        lng: 26.0166702
+    };
 
-        var markerPH = new google.maps.Marker({
-            position: prahova,
-            map: map,
-            title: 'Prahova',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerPH = new google.maps.Marker({
+        position: prahova,
+        map: map,
+        title: 'Prahova',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=prahova", 'http://127.0.0.1:8125/api/2016/sum?judet=prahova', 'http://127.0.0.1:8125/api/2017/sum?judet=prahova', 'http://127.0.0.1:8125/api/2018/sum?judet=prahova', 'http://127.0.0.1:8125/api/2019/sum?judet=prahova')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=prahova", 'http://127.0.0.1:8125/api/2016/sum?judet=prahova', 'http://127.0.0.1:8125/api/2017/sum?judet=prahova', 'http://127.0.0.1:8125/api/2018/sum?judet=prahova', 'http://127.0.0.1:8125/api/2019/sum?judet=prahova')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringPH =
@@ -1466,27 +1464,27 @@ function initMap() {
 
         })
 
-        //Judetul Valcea
+    //Judetul Valcea
 
-        var valcea = {
-            lat: 45.0999985,
-            lng: 24.3666706
-        };
+    var valcea = {
+        lat: 45.0999985,
+        lng: 24.3666706
+    };
 
-        var markerVL = new google.maps.Marker({
-            position: valcea,
-            map: map,
-            title: 'Valcea',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerVL = new google.maps.Marker({
+        position: valcea,
+        map: map,
+        title: 'Valcea',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=vilcea", 'http://127.0.0.1:8125/api/2016/sum?judet=vilcea', 'http://127.0.0.1:8125/api/2017/sum?judet=vilcea', 'http://127.0.0.1:8125/api/2018/sum?judet=vilcea', 'http://127.0.0.1:8125/api/2019/sum?judet=vilcea')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=vilcea", 'http://127.0.0.1:8125/api/2016/sum?judet=vilcea', 'http://127.0.0.1:8125/api/2017/sum?judet=vilcea', 'http://127.0.0.1:8125/api/2018/sum?judet=vilcea', 'http://127.0.0.1:8125/api/2019/sum?judet=vilcea')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringVL =
@@ -1510,27 +1508,27 @@ function initMap() {
 
         })
 
-        //Judetul Dambovita
+    //Judetul Dambovita
 
-        var dambovita = {
-            lat: 44.9254303,
-            lng: 25.4566994
-        };
+    var dambovita = {
+        lat: 44.9254303,
+        lng: 25.4566994
+    };
 
-        var markerDB = new google.maps.Marker({
-            position: dambovita,
-            map: map,
-            title: 'Dambovita',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerDB = new google.maps.Marker({
+        position: dambovita,
+        map: map,
+        title: 'Dambovita',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=dimbovita", 'http://127.0.0.1:8125/api/2016/sum?judet=dimbovita', 'http://127.0.0.1:8125/api/2017/sum?judet=dimbovita', 'http://127.0.0.1:8125/api/2018/sum?judet=dimbovita', 'http://127.0.0.1:8125/api/2019/sum?judet=dimbovita')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=dimbovita", 'http://127.0.0.1:8125/api/2016/sum?judet=dimbovita', 'http://127.0.0.1:8125/api/2017/sum?judet=dimbovita', 'http://127.0.0.1:8125/api/2018/sum?judet=dimbovita', 'http://127.0.0.1:8125/api/2019/sum?judet=dimbovita')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringDB =
@@ -1554,27 +1552,27 @@ function initMap() {
 
         })
 
-        //Judetul Calarasi
+    //Judetul Calarasi
 
-        var calarasi = {
-            lat: 44.200000,
-            lng: 27.333333
-        };
+    var calarasi = {
+        lat: 44.200000,
+        lng: 27.333333
+    };
 
-        var markerCL = new google.maps.Marker({
-            position: calarasi,
-            map: map,
-            title: 'Calarasi',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerCL = new google.maps.Marker({
+        position: calarasi,
+        map: map,
+        title: 'Calarasi',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=calarasi", 'http://127.0.0.1:8125/api/2016/sum?judet=calarasi', 'http://127.0.0.1:8125/api/2017/sum?judet=calarasi', 'http://127.0.0.1:8125/api/2018/sum?judet=calarasi', 'http://127.0.0.1:8125/api/2019/sum?judet=calarasi')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=calarasi", 'http://127.0.0.1:8125/api/2016/sum?judet=calarasi', 'http://127.0.0.1:8125/api/2017/sum?judet=calarasi', 'http://127.0.0.1:8125/api/2018/sum?judet=calarasi', 'http://127.0.0.1:8125/api/2019/sum?judet=calarasi')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringCL =
@@ -1598,28 +1596,28 @@ function initMap() {
 
         })
 
-        
-        //Judetul Ialomita
 
-        var ialomita = {
-            lat: 44.5647011,
-            lng: 27.3633003
-        };
+    //Judetul Ialomita
 
-        var markerIL = new google.maps.Marker({
-            position: ialomita,
-            map: map,
-            title: 'Ialomita',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var ialomita = {
+        lat: 44.5647011,
+        lng: 27.3633003
+    };
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=ialomita", 'http://127.0.0.1:8125/api/2016/sum?judet=ialomita', 'http://127.0.0.1:8125/api/2017/sum?judet=ialomita', 'http://127.0.0.1:8125/api/2018/sum?judet=ialomita', 'http://127.0.0.1:8125/api/2019/sum?judet=ialomita')
+    var markerIL = new google.maps.Marker({
+        position: ialomita,
+        map: map,
+        title: 'Ialomita',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
+
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=ialomita", 'http://127.0.0.1:8125/api/2016/sum?judet=ialomita', 'http://127.0.0.1:8125/api/2017/sum?judet=ialomita', 'http://127.0.0.1:8125/api/2018/sum?judet=ialomita', 'http://127.0.0.1:8125/api/2019/sum?judet=ialomita')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringIL =
@@ -1643,27 +1641,27 @@ function initMap() {
 
         })
 
-        //Judetul Teleorman
+    //Judetul Teleorman
 
-        var teleorman = {
-            lat: 43.9833298,
-            lng: 25.3333302
-        };
+    var teleorman = {
+        lat: 43.9833298,
+        lng: 25.3333302
+    };
 
-        var markerTL = new google.maps.Marker({
-            position: teleorman,
-            map: map,
-            title: 'Teleorman',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerTL = new google.maps.Marker({
+        position: teleorman,
+        map: map,
+        title: 'Teleorman',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=teleorman", 'http://127.0.0.1:8125/api/2016/sum?judet=teleorman', 'http://127.0.0.1:8125/api/2017/sum?judet=teleorman', 'http://127.0.0.1:8125/api/2018/sum?judet=teleorman', 'http://127.0.0.1:8125/api/2019/sum?judet=teleorman')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=teleorman", 'http://127.0.0.1:8125/api/2016/sum?judet=teleorman', 'http://127.0.0.1:8125/api/2017/sum?judet=teleorman', 'http://127.0.0.1:8125/api/2018/sum?judet=teleorman', 'http://127.0.0.1:8125/api/2019/sum?judet=teleorman')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringTL =
@@ -1687,27 +1685,27 @@ function initMap() {
 
         })
 
-        //Judetul Giurgiu
+    //Judetul Giurgiu
 
-        var giurgiu = {
-            lat: 43.8833313,
-            lng: 25.9666691
-        };
+    var giurgiu = {
+        lat: 43.8833313,
+        lng: 25.9666691
+    };
 
-        var markerGG = new google.maps.Marker({
-            position: giurgiu,
-            map: map,
-            title: 'Giurgiu',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerGG = new google.maps.Marker({
+        position: giurgiu,
+        map: map,
+        title: 'Giurgiu',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=giurgiu", 'http://127.0.0.1:8125/api/2016/sum?judet=giurgiu', 'http://127.0.0.1:8125/api/2017/sum?judet=giurgiu', 'http://127.0.0.1:8125/api/2018/sum?judet=giurgiu', 'http://127.0.0.1:8125/api/2019/sum?judet=giurgiu')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=giurgiu", 'http://127.0.0.1:8125/api/2016/sum?judet=giurgiu', 'http://127.0.0.1:8125/api/2017/sum?judet=giurgiu', 'http://127.0.0.1:8125/api/2018/sum?judet=giurgiu', 'http://127.0.0.1:8125/api/2019/sum?judet=giurgiu')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringGG =
@@ -1731,27 +1729,27 @@ function initMap() {
 
         })
 
-        //Judetul Harghita
+    //Judetul Harghita
 
-        var harghita = {
-            lat: 46.3499985,
-            lng: 25.7999992
-        };
+    var harghita = {
+        lat: 46.3499985,
+        lng: 25.7999992
+    };
 
-        var markerHG = new google.maps.Marker({
-            position: harghita,
-            map: map,
-            title: 'Harghita',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
-        });
+    var markerHG = new google.maps.Marker({
+        position: harghita,
+        map: map,
+        title: 'Harghita',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
         .then((data) => {
-            console.log(JSON.stringify(data));
+
 
 
             var contentStringHG =
@@ -1775,91 +1773,91 @@ function initMap() {
 
         })
 
-        /*Judetul Satu Mare
+    /*Judetul Satu Mare
 
-        var satumare = {
-            lat: 47.790001,
-            lng: 22.889999
-        };
+    var satumare = {
+        lat: 47.790001,
+        lng: 22.889999
+    };
 
-        var markerSM = new google.maps.Marker({
-            position: satumare,
-            map: map,
-            title: 'Satu Mare',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
+    var markerSM = new google.maps.Marker({
+        position: satumare,
+        map: map,
+        title: 'Satu Mare',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
+
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
+    .then((data) => {
+        
+
+
+        var contentStringSM =
+            '<div class ="infoWindow">' +
+            '<h1 class = "infoHeading">Date Judet Satu Mare:</h1>' +
+            '<p> Numar total de masini pe ani: </p> ' +
+            '<p> 2015 ->  ' + JSON.stringify(data[0]) + '</p>' +
+            '<p> 2016 ->  ' + JSON.stringify(data[1]) + '</p>' +
+            '<p> 2017 ->  ' + JSON.stringify(data[2]) + '</p>' +
+            '<p> 2018 ->  ' + JSON.stringify(data[3]) + '</p>' +
+            '<p> 2019 ->  ' + JSON.stringify(data[4]) + '</p>' +
+            '</div>';
+        var infowindowSM = new google.maps.InfoWindow({
+            content: contentStringSM,
+            maxWidth: 200
         });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
-        .then((data) => {
-            console.log(JSON.stringify(data));
-
-
-            var contentStringSM =
-                '<div class ="infoWindow">' +
-                '<h1 class = "infoHeading">Date Judet Satu Mare:</h1>' +
-                '<p> Numar total de masini pe ani: </p> ' +
-                '<p> 2015 ->  ' + JSON.stringify(data[0]) + '</p>' +
-                '<p> 2016 ->  ' + JSON.stringify(data[1]) + '</p>' +
-                '<p> 2017 ->  ' + JSON.stringify(data[2]) + '</p>' +
-                '<p> 2018 ->  ' + JSON.stringify(data[3]) + '</p>' +
-                '<p> 2019 ->  ' + JSON.stringify(data[4]) + '</p>' +
-                '</div>';
-            var infowindowSM = new google.maps.InfoWindow({
-                content: contentStringSM,
-                maxWidth: 200
-            });
-
-            markerSM.addListener('click', function() {
-                infowindowSM.open(map, markerSM);
-            });
-
-        })*/
-
-        /*Judetul Maramures
-
-        var satumare = {
-            lat: 47.6572914,
-            lng: 23.5680809
-        };
-
-        var markerMA = new google.maps.Marker({
-            position: maramures,
-            map: map,
-            title: 'Maramures',
-            icon: {
-                path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-                scale: 5,
-                strokeColor: "#7fd4d2"
-            }
+        markerSM.addListener('click', function() {
+            infowindowSM.open(map, markerSM);
         });
 
-        fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
-        .then((data) => {
-            console.log(JSON.stringify(data));
+    })*/
+
+    /*Judetul Maramures
+
+    var satumare = {
+        lat: 47.6572914,
+        lng: 23.5680809
+    };
+
+    var markerMA = new google.maps.Marker({
+        position: maramures,
+        map: map,
+        title: 'Maramures',
+        icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 5,
+            strokeColor: "#7fd4d2"
+        }
+    });
+
+    fetchAsyncData("http://127.0.0.1:8125/api/2015/sum?judet=harghita", 'http://127.0.0.1:8125/api/2016/sum?judet=harghita', 'http://127.0.0.1:8125/api/2017/sum?judet=harghita', 'http://127.0.0.1:8125/api/2018/sum?judet=harghita', 'http://127.0.0.1:8125/api/2019/sum?judet=harghita')
+    .then((data) => {
+        
 
 
-            var contentStringMA =
-                '<div class ="infoWindow">' +
-                '<h1 class = "infoHeading">Date Judet Maramures:</h1>' +
-                '<p> Numar total de masini pe ani: </p> ' +
-                '<p> 2015 ->  ' + JSON.stringify(data[0]) + '</p>' +
-                '<p> 2016 ->  ' + JSON.stringify(data[1]) + '</p>' +
-                '<p> 2017 ->  ' + JSON.stringify(data[2]) + '</p>' +
-                '<p> 2018 ->  ' + JSON.stringify(data[3]) + '</p>' +
-                '<p> 2019 ->  ' + JSON.stringify(data[4]) + '</p>' +
-                '</div>';
-            var infowindowMA = new google.maps.InfoWindow({
-                content: contentStringMA,
-                maxWidth: 200
-            });
+        var contentStringMA =
+            '<div class ="infoWindow">' +
+            '<h1 class = "infoHeading">Date Judet Maramures:</h1>' +
+            '<p> Numar total de masini pe ani: </p> ' +
+            '<p> 2015 ->  ' + JSON.stringify(data[0]) + '</p>' +
+            '<p> 2016 ->  ' + JSON.stringify(data[1]) + '</p>' +
+            '<p> 2017 ->  ' + JSON.stringify(data[2]) + '</p>' +
+            '<p> 2018 ->  ' + JSON.stringify(data[3]) + '</p>' +
+            '<p> 2019 ->  ' + JSON.stringify(data[4]) + '</p>' +
+            '</div>';
+        var infowindowMA = new google.maps.InfoWindow({
+            content: contentStringMA,
+            maxWidth: 200
+        });
 
-            markerMA.addListener('click', function() {
-                infowindowMA.open(map, markerMA);
-            });
+        markerMA.addListener('click', function() {
+            infowindowMA.open(map, markerMA);
+        });
 
-        })*/
+    })*/
 }
