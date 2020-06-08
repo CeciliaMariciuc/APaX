@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./Interfata/style.css">
     <link rel="stylesheet" type="text/css" href="./Interfata/despre.css">
+    <link rel="stylesheet" type="text/css" href="./Interfata/style.css">
     <script src="./Interfata/responsive.js"></script>
+    <script src="./Interfata/javascript/serviciu_administrare.js"></script>
     <title>Auto Park Web Explorer</title>
 </head>
 
@@ -27,10 +28,10 @@
             </ul>
         </nav>
         <div class="help">
-            <a href="#0" id="helpButton">Ajutor</a>
+            <a href="/ajutor" id="helpButton">Ajutor</a>
         </div>
     </header>
-    <div id="main">
+    <div id="main_despre">
         <div id="despre_info">
             <article class="card_despre">
                 <h1>Cerinta</h1>
@@ -43,8 +44,27 @@
                 <p>bla bla bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla</p>
             </article>
             <article class="card_despre">
-                <h1>Echipa</h1>
-                <p>bla bla bla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla</p>
+                <h1>Administrator</h1>
+                <div class="wrapper">
+                    <form class="form1" action="http://127.0.0.1:8125/administrare">
+                        <div class="formtitle">
+                            Introduceti parola pentru a accesa pagina:
+                        </div>
+
+                        <div class="input nobottomborder">
+                            <div class="inputtext">
+                                Parola:
+                            </div>
+
+                            <div class="inputcontent">
+                                <input type="password" id="password" /><br />
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <input class="submitButton" type="button" value="Acceseaza" onclick="checkPassword()" />
+                        </div>
+                    </form>
+                </div>
             </article>
         </div>
         <div id="despre_main">
@@ -58,22 +78,22 @@
             <div class="contact">
                 <p>CONTACTEAZA-NE</p>
                 <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                <div class="login">
-                    <input type="text" placeholder="Numele tau:" class="input">
-                    <input type="text" placeholder="Adresa ta de email:" class="input">
-                </div>
+                    <div class="login">
+                        <input type="text" placeholder="Numele tau:" class="input">
+                        <input type="text" placeholder="Adresa ta de email:" class="input">
+                    </div>
 
-                <div class="subject">
-                    <input type="text" placeholder="Subiect:" class="input">
-                </div>
+                    <div class="subject">
+                        <input type="text" placeholder="Subiect:" class="input">
+                    </div>
 
-                <div class="msg">
-                    <textarea class="area" placeholder="Lasa un mesaj:"></textarea>
-                </div>
+                    <div class="msg">
+                        <textarea class="area" placeholder="Lasa un mesaj:"></textarea>
+                    </div>
 
-                <div class="btn">
-                    <input class="btn" type="submit" value="Trimite mesaj">
-                </div>
+                    <div class="btn">
+                        <input class="btn" type="submit" value="Trimite mesaj">
+                    </div>
                 </form>
             </div>
             <div class="card">

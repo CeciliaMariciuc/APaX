@@ -307,6 +307,20 @@ svg {
     height: 450px;
 }
 
+#stergereDate,
+#inserareDate,
+#actualizareDate {
+    display: none;
+    flex-flow: column;
+}
+
+#raspunsStergere,
+#raspunsInserare,
+#raspunsActualizare {
+    display: flex;
+    overflow: auto;
+}
+
 #map {
     width: 100%;
     height: 500px;
@@ -320,7 +334,9 @@ svg {
     header,
     nav ul,
     #optiuni_vizualizare_comb,
-    #optiuni_vizualizare {
+    #optiuni_vizualizare,
+    #despre_info,
+    #despre_main {
         display: flex;
         -webkit-flex-flow: column;
         flex-flow: column;
@@ -360,12 +376,19 @@ svg {
     #helpButton {
         display: none;
     }
+    #despre_info,
+    #despre_main,
+    .contact {
+        width: 450px;
+    }
     #vizualizare,
     #main>aside,
     nav,
     header,
     #optiuni_vizualizare_comb,
-    #optiuni_vizualizare {
+    #optiuni_vizualizare,
+    #despre_info,
+    #despre_main {
         -webkit-order: 0;
         order: 0;
     }

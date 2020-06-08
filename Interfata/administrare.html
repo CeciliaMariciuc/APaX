@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Interfata/style.css">
+    <script src="./Interfata/responsive.js"></script>
+    <script src="./Interfata/javascript/serviciu_administrare.js"></script>
+    <title>Auto Park Web Explorer</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/" class="logo">Auto Park Web Explorer</a>
+                    <button onclick="myFunction()" id="menu-button">
+				    <i class="fa fa-bars fa-lg" ></i>
+					</button>
+                </li>
+                <li class="menu"><a href="/statistici">Statistici</a></li>
+                <li class="menu"><a href="/harta">Harta</a></li>
+                <li class="menu"><a href="/vizualizare">Vizualizare</a></li>
+                <li class="menu"><a href="/despre">Despre</a></li>
+            </ul>
+        </nav>
+        <div class="help">
+            <a href="/ajutor" id="helpButton">Ajutor</a>
+        </div>
+    </header>
+    <div id="main">
+        <div id="vizualizare">
+            <div id="opt_section">
+                Bun venit! Poti face urmatoarele operatii:
+                <label for="format">Judet:</label>
+                <select name="operatie" id="operatie_opt">
+                 <option value="stergereDate">Stergere</option>
+                 <option value="inserareDate">Inserare</option>
+                 <option value="actualizareDate">Actualizare</option>
+               </select>
+                <button type="button" id="operatieAleasa"> -> Mai departe</button>
+            </div>
+            <div id="stergereDate">
+                <label for="format">Introdu id-ul inregistrarii pe care doriti sa o stergeti:</label>
+                <input type="text" id="id_stergere" name="id" value="">
+                <button type="button" id="executaStergere"> Executa operatia </button>
+                <div id="raspunsStergere">
+                </div>
+            </div>
+            <div id="inserareDate">
+                <label for="format">Judet</label>
+                <input type="text" id="judet_inserare" name="judet" value="">
+                <label for="format">Categorie nationala</label>
+                <input type="text" id="categ_nationala_inserare" name="categ_nationala" value="">
+                <label for="format">Categorie comunitara</label>
+                <input type="text" id="categ_comunitara_inserare" name="categ_comunitara" value="">
+                <label for="format">Marca</label>
+                <input type="text" id="marca" name="marca" value="">
+                <label for="format">Descriere comerciala</label>
+                <input type="text" id="descr_comerciala_inserare" name="descr_comerciala" value="">
+                <label for="format">Value name</label>
+                <input type="text" id="value_name_inserare" name="value_name" value="">
+                <label for="format">Total vehicule</label>
+                <input type="text" id="t_vehicule_inserare" name="t_vehicule" value="">
+                <button type="button" id="executaInserare"> Executa operatia </button>
+                <div id="raspunsInserare">
+
+                </div>
+            </div>
+            <div id="actualizareDate">
+                <label for="format">Id inregistrare: </label>
+                <input type="text" id="id_actualizare" name="id" value="">
+                <label for="format">Judet</label>
+                <input type="text" id="judet_actualizare" name="judet" value="">
+                <label for="format">Categorie nationala</label>
+                <input type="text" id="categ_nationala_actualizare" name="categ_nationala" value="">
+                <label for="format">Categorie comunitara</label>
+                <input type="text" id="categ_comunitara_actualizare" name="categ_comunitara" value="">
+                <label for="format">Marca</label>
+                <input type="text" id="marca_actualizare" name="marca" value="">
+                <label for="format">Descriere comerciala</label>
+                <input type="text" id="descr_comerciala_actualizare" name="descr_comerciala" value="">
+                <label for="format">Value name</label>
+                <input type="text" id="value_name_actualizare" name="value_name" value="">
+                <label for="format">Total vehicule</label>
+                <input type="text" id="t_vehicule_actualizare" name="t_vehicule" value="">
+                <button type="button" id="executaActualizare"> Executa operatia </button>
+                <div id="raspunsActualizare">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-stanga">
+            <p id="footer_header">Proiect APaX( Tehnologii Web ) </p>
+            <p>@Site realizat de Mariciuc Cecilia si Mariciuc Ovidiu</p>
+        </div>
+        <div id="footer-centru">
+            <p id="footer_header">Link-uri rapide </p>
+            <p>Github</p>
+            <p>Link</p>
+        </div>
+        <div id="footer-dreapta">
+            <p id="footer_header">Contact </p>
+            <p>Telefon : 0707070707</p>
+            <p>Email : ovidiumariciuc99@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
