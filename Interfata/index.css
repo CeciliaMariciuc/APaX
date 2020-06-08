@@ -80,7 +80,18 @@ footer > div > p {
     margin: 10px 20px;
 }
 
-#footer_header {
+footer > div > a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px 20px;
+}
+
+footer > div > a:hover {
+    color: #9fdfde;
+  }
+
+.footer_header {
     padding: 5px;
     font-size: 17px;
     border-bottom: white solid 1px;
