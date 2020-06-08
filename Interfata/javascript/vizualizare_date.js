@@ -1,3 +1,8 @@
+var currentDataTabel = [];
+
+function setCurrentDataTabel(data) {
+    currentDataTabel = data;
+}
 async function fetchData(url) {
     let response = await fetch(url);
     let data = await response.json();
@@ -35,7 +40,6 @@ function removeData() {
     while (tableData.firstChild) {
         tableData.removeChild(tableData.lastChild);
     }
-
 }
 
 window.onload = function() {
@@ -61,6 +65,7 @@ window.onload = function() {
                 let table = document.querySelector("table");
                 removeData();
                 generateTable(table, data);
+                setCurrentDataTabel(data);
                 if (data[0] == null) {
                     console.log('gol');
                     displayMesaj.style.display = "block";
@@ -69,5 +74,16 @@ window.onload = function() {
                     generateTableHead(table, Object.keys(data[0]));
                 }
             })
+
+        }
+
+    var exporta = document.getElementById("exportaTabel");
+    var selectFormatExportTabel = document.getElementById('export_opt_tabel');
+    exporta.onclick =
+        function() {
+            var data = currentDataTabel;
+            if (selectFormatExportTabel.value == 'SVG') exportSVG("tabel.svg");
+            else if (selectFormatExportTabel.value == 'WebP') exportWebP("tabel.webp", "tabel");
+            else exportCSV("tabel.csv", data);
         }
 }

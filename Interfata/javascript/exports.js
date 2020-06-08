@@ -1,13 +1,27 @@
 function exportWebP(file, chart) {
     console.log('export webp');
-    var canvas = document.getElementById(chart);
-    var webp = canvas.toDataURL("image/webp");
-    var a = document.createElement('a');
-    a.href = webp;
-    a.download = file;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    if (chart != 'tabel') {
+        var canvas = document.getElementById(chart);
+        var webp = canvas.toDataURL("image/webp");
+        var a = document.createElement('a');
+        a.href = webp;
+        a.download = file;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    } else {
+        html2canvas(document.getElementById("tabel"), {
+            onrendered: function(canvas) {
+                var webp = canvas.toDataURL("image/webp");
+                var a = document.createElement('a');
+                a.href = webp;
+                a.download = file;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+        })
+    }
 }
 
 function exportSVG(file, data) {
@@ -32,7 +46,7 @@ function exportCSV(filename, data) {
     //second answear: https://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side
     var csv = '';
     var keys = Object.keys(data);
-    keys.forEach(key => csv = csv + key + " , " + data[key] + '\n');
+    keys.forEach(key => csv = csv + key + " , " + JSON.stringify(data[key]) + '\n');
     var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     if (navigator.msSaveBlob) {
         navigator.msSaveBlob(blob, filename);
