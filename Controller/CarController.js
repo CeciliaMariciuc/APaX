@@ -77,7 +77,7 @@ class CarController {
         request.on('end', function() {
             var postBody = JSON.parse(body);
             var result = {
-                "raspuns": "Date inserate:  " + JSON.stringify(postBody)
+                "raspuns": "Date inserate:  "
             };
             //console.log(postBody);
             self.carRepository.insertOne(collection, postBody);
@@ -97,7 +97,7 @@ class CarController {
         request.on('end', function() {
             var putBody = JSON.parse(body);
             var result = {
-                "raspuns": "Date actualizate:  " + JSON.stringify(putBody)
+                "raspuns": "Date actualizate:  "
             };
             self.carRepository.updateOne(collection, putBody, id);
             response.statusCode = 200;
